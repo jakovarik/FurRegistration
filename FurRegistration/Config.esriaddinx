@@ -1,0 +1,27 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>FurRegistration</Name>
+  <AddInID>{80a67cde-7cea-48fc-b831-691cfd08d3dd}</AddInID>
+  <Description>Fur registratio form</Description>
+  <Version>1.0</Version>
+  <Image>Images\FurRegistration.png</Image>
+  <Author>jabrost</Author>
+  <Company>MNDNR</Company>
+  <Date>7/2/2014</Date>
+  <Targets>
+    <Target name="Desktop" version="10.2" />
+  </Targets>
+  <AddIn language="CLR4.5" library="FurRegistration.dll" namespace="FurRegistration">
+    <ArcMap>
+      <Commands>
+        <Button id="MNDNR_FurRegistration_FurRegistrationButton" class="FurRegistrationButton" message="This button opens the fur registration form which generates a point location of each registered fur." caption="Fur Registration Button" tip="Click on the button to open the fur registratio application." category="MN_DNR" image="Images\FurRegistrationButton.png" />
+      </Commands>
+      <Toolbars>
+        <Toolbar id="MNDNR_FurRegistration_DNR_Fur_Registration" caption="DNR Fur Registration" showInitially="true">
+          <Items>
+            <Button refID="MNDNR_FurRegistration_FurRegistrationButton" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>

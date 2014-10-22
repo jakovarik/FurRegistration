@@ -1,0 +1,20 @@
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\bin\Debug\FurRegistration.dll
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\bin\Debug\FurRegistration.pdb
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\bin\Debug\FurRegistration.xml
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\obj\Debug\FurRegistration.frmMain.resources
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\obj\Debug\FurRegistration.Resources.resources
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\obj\Debug\FurRegistration.vbproj.GenerateResource.Cache
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\obj\Debug\FurRegistration.dll
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\obj\Debug\FurRegistration.xml
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\obj\Debug\FurRegistration.pdb
+D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\FurRegistration\bin\Debug\FurRegistration.esriAddIn
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.dll
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.pdb
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.xml
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.frmMain.resources
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.Resources.resources
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.vbproj.GenerateResource.Cache
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.dll
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.xml
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.pdb
+D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.esriAddIn

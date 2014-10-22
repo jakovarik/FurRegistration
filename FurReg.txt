@@ -1,0 +1,40 @@
+Data Source Update Process Started: 8/11/2014 9:46:57 AM
+Updated the Following Layers to D:\gdrs
+	PLS Township center point
+	PLS Township polygon
+
+Did NOT Update the Following Layers: 
+	Fur_Reg
+
+
+
+Data Source Update Process Started: 8/12/2014 2:24:55 PM
+Updated the Following Layers to D:\gdrs
+	PLS Township center point
+	PLS Township polygon
+
+Did NOT Update the Following Layers: 
+	Fur_Reg
+
+
+
+Data Source Update Process Started: 8/12/2014 2:26:58 PM
+Updated the Following Layers to D:\gdrs
+	PLS Township center point
+	PLS Township polygon
+
+Did NOT Update the Following Layers: 
+	Fur_Reg
+
+
+
+Data Source Update Process Started: 8/12/2014 2:37:35 PM
+Updated the Following Layers to D:\gdrs
+	PLS Township center point
+	PLS Township polygon
+
+Did NOT Update the Following Layers: 
+	Fur_Reg
+
+
+
