@@ -10,7 +10,7 @@
   <Targets>
     <Target name="Desktop" version="10.2" />
   </Targets>
-  <AddIn language="CLR4.5" library="FurRegistration.dll" namespace="FurRegistration">
+  <AddIn language="CLR" library="FurRegistration.dll" namespace="FurRegistration">
     <ArcMap>
       <Commands>
         <Button id="MNDNR_FurRegistration_FurRegistrationButton" class="FurRegistrationButton" message="This button opens the fur registration form which generates a point location of each registered fur." caption="Fur Registration Button" tip="Click on the button to open the fur registratio application." category="MN_DNR" image="Images\FurRegistrationButton.png" />

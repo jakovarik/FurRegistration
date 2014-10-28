@@ -202,4 +202,7 @@ Public Class frmMain
     End Sub
 
    
+    Private Sub txtTagNumber_TextChanged(sender As Object, e As EventArgs) Handles txtTagNumber.TextChanged
+
+    End Sub
 End Class

@@ -501,19 +501,19 @@ Module modArcMapCode
                 Exit Sub
             End If
 
-            If Not ctl.Enabled Then Exit Sub
+            'If Not ctl.Enabled Then Exit Sub
 
             If TypeOf ctl Is clsTextbox Then
                 fIDX = pFeatureClass.Fields.FindField(CType(ctl, clsTextbox).npc_FieldName)
                 If fIDX = -1 Then Exit Sub
-                If pFeatureClass.Fields.Field(fIDX).Type = esriFieldType.esriFieldTypeString Then
-                    m_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsTextbox).Get_Value()})
-                Else
-                    Dim obj
-                    obj = CType(ctl, clsTextbox).Get_Value()
-                    obj = CType(obj, Long)
-                    m_FieldValueArray.Add(New Object() {fIDX, obj})
-                End If
+                'If pFeatureClass.Fields.Field(fIDX).Type = esriFieldType.esriFieldTypeString Then
+                m_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsTextbox).Get_Value()})
+                'Else
+                '    Dim obj
+                '    obj = CType(ctl, clsTextbox).Get_Value()
+                '    obj = CType(obj, Long)
+                '    m_FieldValueArray.Add(New Object() {fIDX, obj})
+                'End If
 
             ElseIf TypeOf ctl Is clsDateTimePicker Then
                 fIDX = pFeatureClass.Fields.FindField(CType(ctl, clsDateTimePicker).FieldName)

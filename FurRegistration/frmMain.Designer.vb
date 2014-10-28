@@ -177,10 +177,11 @@ Partial Class frmMain
         '
         'btnNewTrapper
         '
+        Me.btnNewTrapper.ForeColor = System.Drawing.Color.Red
         Me.btnNewTrapper.Location = New System.Drawing.Point(49, 91)
         Me.btnNewTrapper.Name = "btnNewTrapper"
         Me.btnNewTrapper.Size = New System.Drawing.Size(75, 36)
-        Me.btnNewTrapper.TabIndex = 21
+        Me.btnNewTrapper.TabIndex = 19
         Me.btnNewTrapper.Text = "New Trapper"
         Me.btnNewTrapper.UseVisualStyleBackColor = True
         '
@@ -208,7 +209,7 @@ Partial Class frmMain
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(36, 29)
+        Me.GroupBox1.Location = New System.Drawing.Point(36, 22)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(404, 389)
         Me.GroupBox1.TabIndex = 23
@@ -255,10 +256,11 @@ Partial Class frmMain
         '
         'Button1
         '
+        Me.Button1.ForeColor = System.Drawing.Color.Red
         Me.Button1.Location = New System.Drawing.Point(114, 235)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(125, 29)
-        Me.Button1.TabIndex = 21
+        Me.Button1.TabIndex = 20
         Me.Button1.Text = "Search by Name"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -367,7 +369,7 @@ Partial Class frmMain
         Me.btnEnter.Location = New System.Drawing.Point(573, 370)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(170, 56)
-        Me.btnEnter.TabIndex = 26
+        Me.btnEnter.TabIndex = 16
         Me.btnEnter.Text = "Enter"
         Me.btnEnter.UseVisualStyleBackColor = True
         '
@@ -377,16 +379,17 @@ Partial Class frmMain
         Me.btnClose.Location = New System.Drawing.Point(573, 454)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(170, 54)
-        Me.btnClose.TabIndex = 27
+        Me.btnClose.TabIndex = 17
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
         'btnBackupDatabase
         '
+        Me.btnBackupDatabase.ForeColor = System.Drawing.Color.Red
         Me.btnBackupDatabase.Location = New System.Drawing.Point(573, 527)
         Me.btnBackupDatabase.Name = "btnBackupDatabase"
         Me.btnBackupDatabase.Size = New System.Drawing.Size(170, 45)
-        Me.btnBackupDatabase.TabIndex = 28
+        Me.btnBackupDatabase.TabIndex = 18
         Me.btnBackupDatabase.Text = "Backup Database"
         Me.btnBackupDatabase.UseVisualStyleBackColor = True
         '
@@ -452,7 +455,7 @@ Partial Class frmMain
         Me.txtCountyName.npc_FieldName = "County_Name"
         Me.txtCountyName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
         Me.txtCountyName.Size = New System.Drawing.Size(268, 20)
-        Me.txtCountyName.TabIndex = 31
+        Me.txtCountyName.TabIndex = 15
         '
         'txtCountyNumber
         '
@@ -462,37 +465,40 @@ Partial Class frmMain
         Me.txtCountyNumber.npc_FieldName = "County_Number"
         Me.txtCountyNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
         Me.txtCountyNumber.Size = New System.Drawing.Size(268, 20)
-        Me.txtCountyNumber.TabIndex = 30
+        Me.txtCountyNumber.TabIndex = 14
         '
         'txtRangeDirection
         '
         Me.txtRangeDirection.Location = New System.Drawing.Point(109, 101)
+        Me.txtRangeDirection.MaxLength = 1
         Me.txtRangeDirection.Name = "txtRangeDirection"
         Me.txtRangeDirection.npc_DefaultValue = Nothing
         Me.txtRangeDirection.npc_FieldName = "Range_Direction"
         Me.txtRangeDirection.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
         Me.txtRangeDirection.Size = New System.Drawing.Size(268, 20)
-        Me.txtRangeDirection.TabIndex = 28
+        Me.txtRangeDirection.TabIndex = 13
         '
         'txtRange
         '
         Me.txtRange.Location = New System.Drawing.Point(109, 68)
+        Me.txtRange.MaxLength = 2
         Me.txtRange.Name = "txtRange"
         Me.txtRange.npc_DefaultValue = Nothing
         Me.txtRange.npc_FieldName = "Range"
         Me.txtRange.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
         Me.txtRange.Size = New System.Drawing.Size(268, 20)
-        Me.txtRange.TabIndex = 27
+        Me.txtRange.TabIndex = 12
         '
         'txtTownship
         '
         Me.txtTownship.Location = New System.Drawing.Point(109, 33)
+        Me.txtTownship.MaxLength = 3
         Me.txtTownship.Name = "txtTownship"
         Me.txtTownship.npc_DefaultValue = Nothing
         Me.txtTownship.npc_FieldName = "Township"
         Me.txtTownship.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
         Me.txtTownship.Size = New System.Drawing.Size(268, 20)
-        Me.txtTownship.TabIndex = 26
+        Me.txtTownship.TabIndex = 11
         '
         'txtZip
         '
@@ -546,6 +552,7 @@ Partial Class frmMain
         '
         'txtFirstName
         '
+        Me.txtFirstName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtFirstName.Location = New System.Drawing.Point(114, 33)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.npc_DefaultValue = Nothing
@@ -560,14 +567,15 @@ Partial Class frmMain
         Me.cboMNDNRNumber.FormattingEnabled = True
         Me.cboMNDNRNumber.Location = New System.Drawing.Point(228, 36)
         Me.cboMNDNRNumber.Name = "cboMNDNRNumber"
-        Me.cboMNDNRNumber.npc_FieldName = ""
+        Me.cboMNDNRNumber.npc_FieldName = "hello"
         Me.cboMNDNRNumber.Size = New System.Drawing.Size(121, 21)
-        Me.cboMNDNRNumber.TabIndex = 34
+        Me.cboMNDNRNumber.TabIndex = 1
         Me.cboMNDNRNumber.Tag = "custid"
         '
         'cbxJuevenile
         '
         Me.cbxJuevenile.AutoSize = True
+        Me.cbxJuevenile.ForeColor = System.Drawing.Color.Red
         Me.cbxJuevenile.Location = New System.Drawing.Point(59, 154)
         Me.cbxJuevenile.Name = "cbxJuevenile"
         Me.cbxJuevenile.npc_FieldName = ""
@@ -579,12 +587,13 @@ Partial Class frmMain
         'txtTagNumber
         '
         Me.txtTagNumber.Location = New System.Drawing.Point(228, 173)
+        Me.txtTagNumber.MaxLength = 8
         Me.txtTagNumber.Name = "txtTagNumber"
         Me.txtTagNumber.npc_DefaultValue = Nothing
         Me.txtTagNumber.npc_FieldName = "Tag_Number"
         Me.txtTagNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
         Me.txtTagNumber.Size = New System.Drawing.Size(120, 20)
-        Me.txtTagNumber.TabIndex = 32
+        Me.txtTagNumber.TabIndex = 5
         '
         'clsDateTimeRegistered
         '
@@ -593,7 +602,7 @@ Partial Class frmMain
         Me.clsDateTimeRegistered.Location = New System.Drawing.Point(188, 353)
         Me.clsDateTimeRegistered.Name = "clsDateTimeRegistered"
         Me.clsDateTimeRegistered.Size = New System.Drawing.Size(200, 20)
-        Me.clsDateTimeRegistered.TabIndex = 30
+        Me.clsDateTimeRegistered.TabIndex = 10
         '
         'clsCurrentDateTime
         '
@@ -602,7 +611,7 @@ Partial Class frmMain
         Me.clsCurrentDateTime.Location = New System.Drawing.Point(190, 315)
         Me.clsCurrentDateTime.Name = "clsCurrentDateTime"
         Me.clsCurrentDateTime.Size = New System.Drawing.Size(200, 20)
-        Me.clsCurrentDateTime.TabIndex = 29
+        Me.clsCurrentDateTime.TabIndex = 9
         '
         'cboTrapType
         '
@@ -612,7 +621,7 @@ Partial Class frmMain
         Me.cboTrapType.Name = "cboTrapType"
         Me.cboTrapType.npc_FieldName = "Trap_Type"
         Me.cboTrapType.Size = New System.Drawing.Size(121, 21)
-        Me.cboTrapType.TabIndex = 28
+        Me.cboTrapType.TabIndex = 8
         '
         'cboHuntType
         '
@@ -622,7 +631,7 @@ Partial Class frmMain
         Me.cboHuntType.Name = "cboHuntType"
         Me.cboHuntType.npc_FieldName = "Hunt_Type"
         Me.cboHuntType.Size = New System.Drawing.Size(121, 21)
-        Me.cboHuntType.TabIndex = 27
+        Me.cboHuntType.TabIndex = 7
         '
         'cboTakeMethod
         '
@@ -632,7 +641,7 @@ Partial Class frmMain
         Me.cboTakeMethod.Name = "cboTakeMethod"
         Me.cboTakeMethod.npc_FieldName = "Take_Method"
         Me.cboTakeMethod.Size = New System.Drawing.Size(121, 21)
-        Me.cboTakeMethod.TabIndex = 26
+        Me.cboTakeMethod.TabIndex = 6
         '
         'cboSex
         '
@@ -642,7 +651,7 @@ Partial Class frmMain
         Me.cboSex.Name = "cboSex"
         Me.cboSex.npc_FieldName = "Sex"
         Me.cboSex.Size = New System.Drawing.Size(121, 21)
-        Me.cboSex.TabIndex = 25
+        Me.cboSex.TabIndex = 4
         '
         'cboSpecies
         '
@@ -652,7 +661,7 @@ Partial Class frmMain
         Me.cboSpecies.Name = "cboSpecies"
         Me.cboSpecies.npc_FieldName = "Species"
         Me.cboSpecies.Size = New System.Drawing.Size(121, 21)
-        Me.cboSpecies.TabIndex = 24
+        Me.cboSpecies.TabIndex = 3
         '
         'cboStation
         '
@@ -662,13 +671,13 @@ Partial Class frmMain
         Me.cboStation.Name = "cboStation"
         Me.cboStation.npc_FieldName = "Station"
         Me.cboStation.Size = New System.Drawing.Size(121, 21)
-        Me.cboStation.TabIndex = 23
+        Me.cboStation.TabIndex = 2
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(896, 741)
+        Me.ClientSize = New System.Drawing.Size(874, 733)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.txtYCoord)
