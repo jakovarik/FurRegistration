@@ -53,6 +53,7 @@ Module modArcMapCode
         End Try
     End Function
     Public Function Table_FindRow(ByVal pTable As ITable, ByVal aQueryString As String) As IRow
+        'defining the table_findrow methods for use in next process
         Dim pQueryfilter As IQueryFilter
         Dim pCursor As ICursor
         Dim pRow As IRow
@@ -459,14 +460,19 @@ Module modArcMapCode
 
             For Each va In m_FieldValueArray
                 If va(1) Is Nothing Then Continue For
-                MessageBox.Show("field index: " & va(0))
-                pFeature.Value(va(0)) = va(1)
-                MessageBox.Show("Field Index: " & va(0) & ", Value: " & va(1))
+                Try
+                    pFeature.Value(va(0)) = va(1)
+                    'MessageBox.Show("Field Index: " & va(0) & ", Value: " & va(1))
+                Catch ex As Exception
+                    MessageBox.Show("field name: " & pFeature.Fields.Field(va(0)).Name & ", Value: " & va(1))
+                End Try
+              
             Next
             MessageBox.Show("made it through populating feature")
 
             pFeature.Store()
             workspaceEdit.StopEditing(True)
+            My.ArcMap.Document.ActiveView.Refresh()
             'm_Editor.StopOperation("Submitted Edits to Features in " & pFeatureClass.AliasName)
             MessageBox.Show("7")
         Catch ex As Exception
@@ -500,7 +506,15 @@ Module modArcMapCode
             If TypeOf ctl Is clsTextbox Then
                 fIDX = pFeatureClass.Fields.FindField(CType(ctl, clsTextbox).npc_FieldName)
                 If fIDX = -1 Then Exit Sub
-                m_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsTextbox).Get_Value()})
+                If pFeatureClass.Fields.Field(fIDX).Type = esriFieldType.esriFieldTypeString Then
+                    m_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsTextbox).Get_Value()})
+                Else
+                    Dim obj
+                    obj = CType(ctl, clsTextbox).Get_Value()
+                    obj = CType(obj, Long)
+                    m_FieldValueArray.Add(New Object() {fIDX, obj})
+                End If
+
             ElseIf TypeOf ctl Is clsDateTimePicker Then
                 fIDX = pFeatureClass.Fields.FindField(CType(ctl, clsDateTimePicker).FieldName)
                 If fIDX = -1 Then Exit Sub
@@ -510,10 +524,10 @@ Module modArcMapCode
                 If fIDX = -1 Then Exit Sub
                 'check to see if the field name = customer ID then
                 If (CType(ctl, clsCombobox).npc_FieldName = "CUSTOMER_I") Then
-                    m_FieldValueArray.Add(New Object() {fIDX, ctl.Text})
+                    m_FieldValueArray.Add(New Object() {fIDX, CType(ctl.Text, Long)})
                 Else
-                    m_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsCombobox).Get_Value()})
-                    'm_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsCombobox).Get_ValueAsString()})
+                    'm_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsCombobox).Get_Value()})
+                    m_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsCombobox).Get_ValueAsString()})
                 End If
             End If
         Catch ex As Exception

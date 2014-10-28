@@ -439,7 +439,7 @@ Partial Class frmMain
         Me.txtMNDNRNumber.Location = New System.Drawing.Point(299, 674)
         Me.txtMNDNRNumber.Name = "txtMNDNRNumber"
         Me.txtMNDNRNumber.npc_DefaultValue = Nothing
-        Me.txtMNDNRNumber.npc_FieldName = "CUST_ID"
+        Me.txtMNDNRNumber.npc_FieldName = "MNDNR_Number"
         Me.txtMNDNRNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
         Me.txtMNDNRNumber.Size = New System.Drawing.Size(118, 20)
         Me.txtMNDNRNumber.TabIndex = 30
@@ -560,7 +560,7 @@ Partial Class frmMain
         Me.cboMNDNRNumber.FormattingEnabled = True
         Me.cboMNDNRNumber.Location = New System.Drawing.Point(228, 36)
         Me.cboMNDNRNumber.Name = "cboMNDNRNumber"
-        Me.cboMNDNRNumber.npc_FieldName = "Station"
+        Me.cboMNDNRNumber.npc_FieldName = ""
         Me.cboMNDNRNumber.Size = New System.Drawing.Size(121, 21)
         Me.cboMNDNRNumber.TabIndex = 34
         Me.cboMNDNRNumber.Tag = "custid"
@@ -589,7 +589,7 @@ Partial Class frmMain
         'clsDateTimeRegistered
         '
         Me.clsDateTimeRegistered.DefaultValue = Nothing
-        Me.clsDateTimeRegistered.FieldName = ""
+        Me.clsDateTimeRegistered.FieldName = "Date_Registered"
         Me.clsDateTimeRegistered.Location = New System.Drawing.Point(188, 353)
         Me.clsDateTimeRegistered.Name = "clsDateTimeRegistered"
         Me.clsDateTimeRegistered.Size = New System.Drawing.Size(200, 20)
@@ -598,7 +598,7 @@ Partial Class frmMain
         'clsCurrentDateTime
         '
         Me.clsCurrentDateTime.DefaultValue = Nothing
-        Me.clsCurrentDateTime.FieldName = ""
+        Me.clsCurrentDateTime.FieldName = "Date_Taken"
         Me.clsCurrentDateTime.Location = New System.Drawing.Point(190, 315)
         Me.clsCurrentDateTime.Name = "clsCurrentDateTime"
         Me.clsCurrentDateTime.Size = New System.Drawing.Size(200, 20)
