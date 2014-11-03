@@ -19,7 +19,6 @@ Public Class frmMain
 
         'cboMNDNRNumber.Text = String.Empty 'get the list of MNDNR ID's. Loop through list, get highest value, add 1.
 
-
         cboStation.Text = String.Empty
         cboSpecies.Text = String.Empty
         cboSex.Text = String.Empty
@@ -203,6 +202,11 @@ Public Class frmMain
 
    
     Private Sub txtTagNumber_TextChanged(sender As Object, e As EventArgs) Handles txtTagNumber.TextChanged
+
+    End Sub
+
+    Private Sub cbxJuevenile_CheckedChanged(sender As Object, e As EventArgs) Handles cbxJuevenile.CheckedChanged
+        'put code here to genereate new number with 9999 prefix
 
     End Sub
 End Class

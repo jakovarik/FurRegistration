@@ -22,11 +22,11 @@ Module modArcMapCode
 
     'The name of the feature class you're looking for
     Public m_FeatureClassName As String = "Fur_Reg"
-    Public m_FeatureClassPath As String = "D:\Users\jabrost\Documents\Visual Studio 2012\Projects\FurRegistration\Fur_Registration.gdb"
+    Public m_FeatureClassPath As String = "I:\MRG\MIS\gis\Fur_Registration_Database\Fur_Registration.gdb"
     'The name of the various PLS layers
-    Public m_PLSPath = "D:\gdrs\data\pub\us_mn_state_dnr\plan_mndnr_public_land_survey\fgdb\plan_mndnr_public_land_survey.gdb"
+    Public m_PLSPath = "V:\gdrs\data\pub\us_mn_state_dnr\plan_mndnr_public_land_survey\fgdb\plan_mndnr_public_land_survey.gdb"
     Public m_PLSName = "pls_twpspy3"
-    Public m_CountyPath = "D:\gdrs\data\pub\us_mn_state_dnr\bdry_counties_in_minnesota\fgdb\bdry_counties_in_minnesota.gdb"
+    Public m_CountyPath = "V:\gdrs\data\pub\us_mn_state_dnr\bdry_counties_in_minnesota\fgdb\bdry_counties_in_minnesota.gdb"
     Public m_CountyName = "mn_county_boundaries"
     Public m_xCoord As Double = 0
     Public m_yCoord As Double = 0
@@ -35,6 +35,7 @@ Module modArcMapCode
 #Region "TABLE FUNCTIONS"
     Public Function Table_GetFromPath(ByVal aPath As String, ByVal aName As String) As ITable
         'pass path including gdb name and name of table and function passes table object
+        MessageBox.Show(aPath & "," & aName)
         Dim factoryType As Type = Type.GetTypeFromProgID("esriDataSourcesGDB.FileGDBWorkspaceFactory")
 
         Dim wf As IWorkspaceFactory
@@ -456,7 +457,7 @@ Module modArcMapCode
 
             pFeature = pFeatureClass.CreateFeature()
             pFeature.Shape = pGeometry
-            MessageBox.Show("6")
+            'MessageBox.Show("6")
 
             For Each va In m_FieldValueArray
                 If va(1) Is Nothing Then Continue For
@@ -468,25 +469,25 @@ Module modArcMapCode
                 End Try
               
             Next
-            MessageBox.Show("made it through populating feature")
+            'MessageBox.Show("made it through populating feature")
 
             pFeature.Store()
             workspaceEdit.StopEditing(True)
             My.ArcMap.Document.ActiveView.Refresh()
             'm_Editor.StopOperation("Submitted Edits to Features in " & pFeatureClass.AliasName)
-            MessageBox.Show("7")
+            'MessageBox.Show("7")
         Catch ex As Exception
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
             If Not workspaceEdit Is Nothing Then
                 If workspaceEdit.IsInEditOperation Then My.ArcMap.Document.OperationStack.Undo() '  m_Editor.UndoOperation()
             End If
-            MessageBox.Show("8")
+            'MessageBox.Show("8")
         Finally
             pFeature = Nothing
             workspaceEdit = Nothing
             pFeatureClass = Nothing
         End Try
-        MessageBox.Show("9")
+        'MessageBox.Show("9")
     End Sub
     Public Sub Form_SetFieldValueArray(ByVal ctl As Control, ByVal pFeatureClass As IFeatureClass)
         'Pulls all the values out of controls and associates them with the proper field index from the feature class.

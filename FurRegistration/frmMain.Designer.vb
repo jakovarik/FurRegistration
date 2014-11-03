@@ -35,15 +35,37 @@ Partial Class frmMain
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnNewTrapper = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cboMNDNRNumber = New FurRegistration.clsCombobox()
+        Me.cbxJuevenile = New FurRegistration.clsCheckbox(Me.components)
+        Me.txtTagNumber = New FurRegistration.clsTextbox(Me.components)
+        Me.clsDateTimeRegistered = New FurRegistration.clsDateTimePicker(Me.components)
+        Me.clsCurrentDateTime = New FurRegistration.clsDateTimePicker(Me.components)
+        Me.cboTrapType = New FurRegistration.clsCombobox()
+        Me.cboHuntType = New FurRegistration.clsCombobox()
+        Me.cboTakeMethod = New FurRegistration.clsCombobox()
+        Me.cboSex = New FurRegistration.clsCombobox()
+        Me.cboSpecies = New FurRegistration.clsCombobox()
+        Me.cboStation = New FurRegistration.clsCombobox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.txtZip = New FurRegistration.clsTextbox(Me.components)
+        Me.txtState = New FurRegistration.clsTextbox(Me.components)
+        Me.txtCity = New FurRegistration.clsTextbox(Me.components)
+        Me.txtAddress = New FurRegistration.clsTextbox(Me.components)
+        Me.txtLastName = New FurRegistration.clsTextbox(Me.components)
+        Me.txtFirstName = New FurRegistration.clsTextbox(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtCountyName = New FurRegistration.clsTextbox(Me.components)
+        Me.txtCountyNumber = New FurRegistration.clsTextbox(Me.components)
+        Me.txtRangeDirection = New FurRegistration.clsTextbox(Me.components)
+        Me.txtRange = New FurRegistration.clsTextbox(Me.components)
+        Me.txtTownship = New FurRegistration.clsTextbox(Me.components)
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -58,28 +80,6 @@ Partial Class frmMain
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.txtMNDNRNumber = New FurRegistration.clsTextbox(Me.components)
-        Me.txtCountyName = New FurRegistration.clsTextbox(Me.components)
-        Me.txtCountyNumber = New FurRegistration.clsTextbox(Me.components)
-        Me.txtRangeDirection = New FurRegistration.clsTextbox(Me.components)
-        Me.txtRange = New FurRegistration.clsTextbox(Me.components)
-        Me.txtTownship = New FurRegistration.clsTextbox(Me.components)
-        Me.txtZip = New FurRegistration.clsTextbox(Me.components)
-        Me.txtState = New FurRegistration.clsTextbox(Me.components)
-        Me.txtCity = New FurRegistration.clsTextbox(Me.components)
-        Me.txtAddress = New FurRegistration.clsTextbox(Me.components)
-        Me.txtLastName = New FurRegistration.clsTextbox(Me.components)
-        Me.txtFirstName = New FurRegistration.clsTextbox(Me.components)
-        Me.cboMNDNRNumber = New FurRegistration.clsCombobox()
-        Me.cbxJuevenile = New FurRegistration.clsCheckbox(Me.components)
-        Me.txtTagNumber = New FurRegistration.clsTextbox(Me.components)
-        Me.clsDateTimeRegistered = New FurRegistration.clsDateTimePicker(Me.components)
-        Me.clsCurrentDateTime = New FurRegistration.clsDateTimePicker(Me.components)
-        Me.cboTrapType = New FurRegistration.clsCombobox()
-        Me.cboHuntType = New FurRegistration.clsCombobox()
-        Me.cboTakeMethod = New FurRegistration.clsCombobox()
-        Me.cboSex = New FurRegistration.clsCombobox()
-        Me.cboSpecies = New FurRegistration.clsCombobox()
-        Me.cboStation = New FurRegistration.clsCombobox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -215,352 +215,6 @@ Partial Class frmMain
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label23)
-        Me.GroupBox2.Controls.Add(Me.Label22)
-        Me.GroupBox2.Controls.Add(Me.txtZip)
-        Me.GroupBox2.Controls.Add(Me.txtState)
-        Me.GroupBox2.Controls.Add(Me.txtCity)
-        Me.GroupBox2.Controls.Add(Me.txtAddress)
-        Me.GroupBox2.Controls.Add(Me.txtLastName)
-        Me.GroupBox2.Controls.Add(Me.txtFirstName)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Location = New System.Drawing.Point(36, 434)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(404, 270)
-        Me.GroupBox2.TabIndex = 24
-        Me.GroupBox2.TabStop = False
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(54, 212)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(53, 13)
-        Me.Label23.TabIndex = 29
-        Me.Label23.Text = "Zip Code:"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(73, 178)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(35, 13)
-        Me.Label22.TabIndex = 28
-        Me.Label22.Text = "State:"
-        '
-        'Button1
-        '
-        Me.Button1.ForeColor = System.Drawing.Color.Red
-        Me.Button1.Location = New System.Drawing.Point(114, 235)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 29)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "Search by Name"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(46, 73)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(61, 13)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Last Name:"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(60, 107)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(48, 13)
-        Me.Label12.TabIndex = 3
-        Me.Label12.Text = "Address:"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(80, 143)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(27, 13)
-        Me.Label14.TabIndex = 5
-        Me.Label14.Text = "City:"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(47, 36)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(60, 13)
-        Me.Label17.TabIndex = 7
-        Me.Label17.Text = "First Name:"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.txtCountyName)
-        Me.GroupBox3.Controls.Add(Me.txtCountyNumber)
-        Me.GroupBox3.Controls.Add(Me.txtRangeDirection)
-        Me.GroupBox3.Controls.Add(Me.txtRange)
-        Me.GroupBox3.Controls.Add(Me.txtTownship)
-        Me.GroupBox3.Controls.Add(Me.Label20)
-        Me.GroupBox3.Controls.Add(Me.Label19)
-        Me.GroupBox3.Controls.Add(Me.Label13)
-        Me.GroupBox3.Controls.Add(Me.Label15)
-        Me.GroupBox3.Controls.Add(Me.Label18)
-        Me.GroupBox3.Location = New System.Drawing.Point(460, 41)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(388, 216)
-        Me.GroupBox3.TabIndex = 25
-        Me.GroupBox3.TabStop = False
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(29, 174)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(74, 13)
-        Me.Label20.TabIndex = 13
-        Me.Label20.Text = "County Name:"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(24, 138)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(83, 13)
-        Me.Label19.TabIndex = 11
-        Me.Label19.Text = "County Number:"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(61, 73)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(42, 13)
-        Me.Label13.TabIndex = 0
-        Me.Label13.Text = "Range:"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(17, 101)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(86, 26)
-        Me.Label15.TabIndex = 3
-        Me.Label15.Text = "Range Direction" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(0=West, 1East):"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(47, 36)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(56, 13)
-        Me.Label18.TabIndex = 7
-        Me.Label18.Text = "Township:"
-        '
-        'btnEnter
-        '
-        Me.btnEnter.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnEnter.Location = New System.Drawing.Point(573, 370)
-        Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(170, 56)
-        Me.btnEnter.TabIndex = 16
-        Me.btnEnter.Text = "Enter"
-        Me.btnEnter.UseVisualStyleBackColor = True
-        '
-        'btnClose
-        '
-        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnClose.Location = New System.Drawing.Point(573, 454)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(170, 54)
-        Me.btnClose.TabIndex = 17
-        Me.btnClose.Text = "Close"
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'btnBackupDatabase
-        '
-        Me.btnBackupDatabase.ForeColor = System.Drawing.Color.Red
-        Me.btnBackupDatabase.Location = New System.Drawing.Point(573, 527)
-        Me.btnBackupDatabase.Name = "btnBackupDatabase"
-        Me.btnBackupDatabase.Size = New System.Drawing.Size(170, 45)
-        Me.btnBackupDatabase.TabIndex = 18
-        Me.btnBackupDatabase.Text = "Backup Database"
-        Me.btnBackupDatabase.UseVisualStyleBackColor = True
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(570, 609)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(77, 13)
-        Me.Label21.TabIndex = 23
-        Me.Label21.Text = "Total Records:"
-        '
-        'txtXCoord
-        '
-        Me.txtXCoord.Location = New System.Drawing.Point(714, 277)
-        Me.txtXCoord.Name = "txtXCoord"
-        Me.txtXCoord.ReadOnly = True
-        Me.txtXCoord.Size = New System.Drawing.Size(100, 20)
-        Me.txtXCoord.TabIndex = 31
-        '
-        'txtYCoord
-        '
-        Me.txtYCoord.Location = New System.Drawing.Point(714, 309)
-        Me.txtYCoord.Name = "txtYCoord"
-        Me.txtYCoord.ReadOnly = True
-        Me.txtYCoord.Size = New System.Drawing.Size(100, 20)
-        Me.txtYCoord.TabIndex = 32
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(660, 280)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(48, 13)
-        Me.Label16.TabIndex = 32
-        Me.Label16.Text = "X Coord:"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(660, 312)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(48, 13)
-        Me.Label24.TabIndex = 33
-        Me.Label24.Text = "Y Coord:"
-        '
-        'txtMNDNRNumber
-        '
-        Me.txtMNDNRNumber.Enabled = False
-        Me.txtMNDNRNumber.Location = New System.Drawing.Point(299, 674)
-        Me.txtMNDNRNumber.Name = "txtMNDNRNumber"
-        Me.txtMNDNRNumber.npc_DefaultValue = Nothing
-        Me.txtMNDNRNumber.npc_FieldName = "MNDNR_Number"
-        Me.txtMNDNRNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtMNDNRNumber.Size = New System.Drawing.Size(118, 20)
-        Me.txtMNDNRNumber.TabIndex = 30
-        '
-        'txtCountyName
-        '
-        Me.txtCountyName.Location = New System.Drawing.Point(109, 171)
-        Me.txtCountyName.Name = "txtCountyName"
-        Me.txtCountyName.npc_DefaultValue = Nothing
-        Me.txtCountyName.npc_FieldName = "County_Name"
-        Me.txtCountyName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtCountyName.Size = New System.Drawing.Size(268, 20)
-        Me.txtCountyName.TabIndex = 15
-        '
-        'txtCountyNumber
-        '
-        Me.txtCountyNumber.Location = New System.Drawing.Point(109, 135)
-        Me.txtCountyNumber.Name = "txtCountyNumber"
-        Me.txtCountyNumber.npc_DefaultValue = Nothing
-        Me.txtCountyNumber.npc_FieldName = "County_Number"
-        Me.txtCountyNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtCountyNumber.Size = New System.Drawing.Size(268, 20)
-        Me.txtCountyNumber.TabIndex = 14
-        '
-        'txtRangeDirection
-        '
-        Me.txtRangeDirection.Location = New System.Drawing.Point(109, 101)
-        Me.txtRangeDirection.MaxLength = 1
-        Me.txtRangeDirection.Name = "txtRangeDirection"
-        Me.txtRangeDirection.npc_DefaultValue = Nothing
-        Me.txtRangeDirection.npc_FieldName = "Range_Direction"
-        Me.txtRangeDirection.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtRangeDirection.Size = New System.Drawing.Size(268, 20)
-        Me.txtRangeDirection.TabIndex = 13
-        '
-        'txtRange
-        '
-        Me.txtRange.Location = New System.Drawing.Point(109, 68)
-        Me.txtRange.MaxLength = 2
-        Me.txtRange.Name = "txtRange"
-        Me.txtRange.npc_DefaultValue = Nothing
-        Me.txtRange.npc_FieldName = "Range"
-        Me.txtRange.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtRange.Size = New System.Drawing.Size(268, 20)
-        Me.txtRange.TabIndex = 12
-        '
-        'txtTownship
-        '
-        Me.txtTownship.Location = New System.Drawing.Point(109, 33)
-        Me.txtTownship.MaxLength = 3
-        Me.txtTownship.Name = "txtTownship"
-        Me.txtTownship.npc_DefaultValue = Nothing
-        Me.txtTownship.npc_FieldName = "Township"
-        Me.txtTownship.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtTownship.Size = New System.Drawing.Size(268, 20)
-        Me.txtTownship.TabIndex = 11
-        '
-        'txtZip
-        '
-        Me.txtZip.Location = New System.Drawing.Point(113, 209)
-        Me.txtZip.Name = "txtZip"
-        Me.txtZip.npc_DefaultValue = Nothing
-        Me.txtZip.npc_FieldName = "Zip"
-        Me.txtZip.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtZip.Size = New System.Drawing.Size(268, 20)
-        Me.txtZip.TabIndex = 27
-        '
-        'txtState
-        '
-        Me.txtState.Location = New System.Drawing.Point(113, 175)
-        Me.txtState.Name = "txtState"
-        Me.txtState.npc_DefaultValue = Nothing
-        Me.txtState.npc_FieldName = "State"
-        Me.txtState.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtState.Size = New System.Drawing.Size(268, 20)
-        Me.txtState.TabIndex = 26
-        '
-        'txtCity
-        '
-        Me.txtCity.Location = New System.Drawing.Point(113, 140)
-        Me.txtCity.Name = "txtCity"
-        Me.txtCity.npc_DefaultValue = Nothing
-        Me.txtCity.npc_FieldName = "City"
-        Me.txtCity.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtCity.Size = New System.Drawing.Size(268, 20)
-        Me.txtCity.TabIndex = 25
-        '
-        'txtAddress
-        '
-        Me.txtAddress.Location = New System.Drawing.Point(113, 100)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.npc_DefaultValue = Nothing
-        Me.txtAddress.npc_FieldName = "Address"
-        Me.txtAddress.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtAddress.Size = New System.Drawing.Size(268, 20)
-        Me.txtAddress.TabIndex = 24
-        '
-        'txtLastName
-        '
-        Me.txtLastName.Location = New System.Drawing.Point(114, 70)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.npc_DefaultValue = Nothing
-        Me.txtLastName.npc_FieldName = "Last_Name"
-        Me.txtLastName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtLastName.Size = New System.Drawing.Size(268, 20)
-        Me.txtLastName.TabIndex = 23
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFirstName.Location = New System.Drawing.Point(114, 33)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.npc_DefaultValue = Nothing
-        Me.txtFirstName.npc_FieldName = "First_Name"
-        Me.txtFirstName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtFirstName.Size = New System.Drawing.Size(268, 20)
-        Me.txtFirstName.TabIndex = 22
-        '
         'cboMNDNRNumber
         '
         Me.cboMNDNRNumber.DefaultValue = Nothing
@@ -672,6 +326,356 @@ Partial Class frmMain
         Me.cboStation.npc_FieldName = "Station"
         Me.cboStation.Size = New System.Drawing.Size(121, 21)
         Me.cboStation.TabIndex = 2
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label23)
+        Me.GroupBox2.Controls.Add(Me.Label22)
+        Me.GroupBox2.Controls.Add(Me.txtZip)
+        Me.GroupBox2.Controls.Add(Me.txtState)
+        Me.GroupBox2.Controls.Add(Me.txtCity)
+        Me.GroupBox2.Controls.Add(Me.txtAddress)
+        Me.GroupBox2.Controls.Add(Me.txtLastName)
+        Me.GroupBox2.Controls.Add(Me.txtFirstName)
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.Label11)
+        Me.GroupBox2.Controls.Add(Me.Label12)
+        Me.GroupBox2.Controls.Add(Me.Label14)
+        Me.GroupBox2.Controls.Add(Me.Label17)
+        Me.GroupBox2.Location = New System.Drawing.Point(36, 434)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(404, 270)
+        Me.GroupBox2.TabIndex = 24
+        Me.GroupBox2.TabStop = False
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(54, 212)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(53, 13)
+        Me.Label23.TabIndex = 29
+        Me.Label23.Text = "Zip Code:"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(73, 178)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(35, 13)
+        Me.Label22.TabIndex = 28
+        Me.Label22.Text = "State:"
+        '
+        'txtZip
+        '
+        Me.txtZip.Location = New System.Drawing.Point(113, 209)
+        Me.txtZip.Name = "txtZip"
+        Me.txtZip.npc_DefaultValue = Nothing
+        Me.txtZip.npc_FieldName = "Zip"
+        Me.txtZip.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtZip.Size = New System.Drawing.Size(268, 20)
+        Me.txtZip.TabIndex = 27
+        '
+        'txtState
+        '
+        Me.txtState.Location = New System.Drawing.Point(113, 175)
+        Me.txtState.Name = "txtState"
+        Me.txtState.npc_DefaultValue = Nothing
+        Me.txtState.npc_FieldName = "State"
+        Me.txtState.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtState.Size = New System.Drawing.Size(268, 20)
+        Me.txtState.TabIndex = 26
+        '
+        'txtCity
+        '
+        Me.txtCity.Location = New System.Drawing.Point(113, 140)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.npc_DefaultValue = Nothing
+        Me.txtCity.npc_FieldName = "City"
+        Me.txtCity.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtCity.Size = New System.Drawing.Size(268, 20)
+        Me.txtCity.TabIndex = 25
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Location = New System.Drawing.Point(113, 100)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.npc_DefaultValue = Nothing
+        Me.txtAddress.npc_FieldName = "Address"
+        Me.txtAddress.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtAddress.Size = New System.Drawing.Size(268, 20)
+        Me.txtAddress.TabIndex = 24
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Location = New System.Drawing.Point(114, 70)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.npc_DefaultValue = Nothing
+        Me.txtLastName.npc_FieldName = "Last_Name"
+        Me.txtLastName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtLastName.Size = New System.Drawing.Size(268, 20)
+        Me.txtLastName.TabIndex = 23
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFirstName.Location = New System.Drawing.Point(114, 33)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.npc_DefaultValue = Nothing
+        Me.txtFirstName.npc_FieldName = "First_Name"
+        Me.txtFirstName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtFirstName.Size = New System.Drawing.Size(268, 20)
+        Me.txtFirstName.TabIndex = 22
+        '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.Red
+        Me.Button1.Location = New System.Drawing.Point(114, 235)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(125, 29)
+        Me.Button1.TabIndex = 20
+        Me.Button1.Text = "Search by Name"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(46, 73)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(61, 13)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Last Name:"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(60, 107)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(48, 13)
+        Me.Label12.TabIndex = 3
+        Me.Label12.Text = "Address:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(80, 143)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(27, 13)
+        Me.Label14.TabIndex = 5
+        Me.Label14.Text = "City:"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(47, 36)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(60, 13)
+        Me.Label17.TabIndex = 7
+        Me.Label17.Text = "First Name:"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.txtCountyName)
+        Me.GroupBox3.Controls.Add(Me.txtCountyNumber)
+        Me.GroupBox3.Controls.Add(Me.txtRangeDirection)
+        Me.GroupBox3.Controls.Add(Me.txtRange)
+        Me.GroupBox3.Controls.Add(Me.txtTownship)
+        Me.GroupBox3.Controls.Add(Me.Label20)
+        Me.GroupBox3.Controls.Add(Me.Label19)
+        Me.GroupBox3.Controls.Add(Me.Label13)
+        Me.GroupBox3.Controls.Add(Me.Label15)
+        Me.GroupBox3.Controls.Add(Me.Label18)
+        Me.GroupBox3.Location = New System.Drawing.Point(460, 41)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(388, 216)
+        Me.GroupBox3.TabIndex = 25
+        Me.GroupBox3.TabStop = False
+        '
+        'txtCountyName
+        '
+        Me.txtCountyName.Location = New System.Drawing.Point(109, 171)
+        Me.txtCountyName.Name = "txtCountyName"
+        Me.txtCountyName.npc_DefaultValue = Nothing
+        Me.txtCountyName.npc_FieldName = "County_Name"
+        Me.txtCountyName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtCountyName.Size = New System.Drawing.Size(268, 20)
+        Me.txtCountyName.TabIndex = 15
+        '
+        'txtCountyNumber
+        '
+        Me.txtCountyNumber.Location = New System.Drawing.Point(109, 135)
+        Me.txtCountyNumber.Name = "txtCountyNumber"
+        Me.txtCountyNumber.npc_DefaultValue = Nothing
+        Me.txtCountyNumber.npc_FieldName = "County_Number"
+        Me.txtCountyNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtCountyNumber.Size = New System.Drawing.Size(268, 20)
+        Me.txtCountyNumber.TabIndex = 14
+        '
+        'txtRangeDirection
+        '
+        Me.txtRangeDirection.Location = New System.Drawing.Point(109, 101)
+        Me.txtRangeDirection.MaxLength = 1
+        Me.txtRangeDirection.Name = "txtRangeDirection"
+        Me.txtRangeDirection.npc_DefaultValue = Nothing
+        Me.txtRangeDirection.npc_FieldName = "Range_Direction"
+        Me.txtRangeDirection.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtRangeDirection.Size = New System.Drawing.Size(268, 20)
+        Me.txtRangeDirection.TabIndex = 13
+        '
+        'txtRange
+        '
+        Me.txtRange.Location = New System.Drawing.Point(109, 68)
+        Me.txtRange.MaxLength = 2
+        Me.txtRange.Name = "txtRange"
+        Me.txtRange.npc_DefaultValue = Nothing
+        Me.txtRange.npc_FieldName = "Range"
+        Me.txtRange.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtRange.Size = New System.Drawing.Size(268, 20)
+        Me.txtRange.TabIndex = 12
+        '
+        'txtTownship
+        '
+        Me.txtTownship.Location = New System.Drawing.Point(109, 33)
+        Me.txtTownship.MaxLength = 3
+        Me.txtTownship.Name = "txtTownship"
+        Me.txtTownship.npc_DefaultValue = Nothing
+        Me.txtTownship.npc_FieldName = "Township"
+        Me.txtTownship.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtTownship.Size = New System.Drawing.Size(268, 20)
+        Me.txtTownship.TabIndex = 11
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(29, 174)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(74, 13)
+        Me.Label20.TabIndex = 13
+        Me.Label20.Text = "County Name:"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(24, 138)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(83, 13)
+        Me.Label19.TabIndex = 11
+        Me.Label19.Text = "County Number:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(61, 73)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(42, 13)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "Range:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(17, 101)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(86, 26)
+        Me.Label15.TabIndex = 3
+        Me.Label15.Text = "Range Direction" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(0=West, 1East):"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(47, 36)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(56, 13)
+        Me.Label18.TabIndex = 7
+        Me.Label18.Text = "Township:"
+        '
+        'btnEnter
+        '
+        Me.btnEnter.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnEnter.Location = New System.Drawing.Point(573, 370)
+        Me.btnEnter.Name = "btnEnter"
+        Me.btnEnter.Size = New System.Drawing.Size(170, 56)
+        Me.btnEnter.TabIndex = 16
+        Me.btnEnter.Text = "Enter"
+        Me.btnEnter.UseVisualStyleBackColor = True
+        '
+        'btnClose
+        '
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnClose.Location = New System.Drawing.Point(573, 454)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(170, 54)
+        Me.btnClose.TabIndex = 17
+        Me.btnClose.Text = "Close"
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
+        'btnBackupDatabase
+        '
+        Me.btnBackupDatabase.ForeColor = System.Drawing.Color.Red
+        Me.btnBackupDatabase.Location = New System.Drawing.Point(573, 527)
+        Me.btnBackupDatabase.Name = "btnBackupDatabase"
+        Me.btnBackupDatabase.Size = New System.Drawing.Size(170, 45)
+        Me.btnBackupDatabase.TabIndex = 18
+        Me.btnBackupDatabase.Text = "Backup Database"
+        Me.btnBackupDatabase.UseVisualStyleBackColor = True
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(570, 609)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(77, 13)
+        Me.Label21.TabIndex = 23
+        Me.Label21.Text = "Total Records:"
+        '
+        'txtXCoord
+        '
+        Me.txtXCoord.Location = New System.Drawing.Point(714, 277)
+        Me.txtXCoord.Name = "txtXCoord"
+        Me.txtXCoord.ReadOnly = True
+        Me.txtXCoord.Size = New System.Drawing.Size(100, 20)
+        Me.txtXCoord.TabIndex = 31
+        Me.txtXCoord.Visible = False
+        '
+        'txtYCoord
+        '
+        Me.txtYCoord.Location = New System.Drawing.Point(714, 309)
+        Me.txtYCoord.Name = "txtYCoord"
+        Me.txtYCoord.ReadOnly = True
+        Me.txtYCoord.Size = New System.Drawing.Size(100, 20)
+        Me.txtYCoord.TabIndex = 32
+        Me.txtYCoord.Visible = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(660, 280)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(48, 13)
+        Me.Label16.TabIndex = 32
+        Me.Label16.Text = "X Coord:"
+        Me.Label16.Visible = False
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(660, 312)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(48, 13)
+        Me.Label24.TabIndex = 33
+        Me.Label24.Text = "Y Coord:"
+        Me.Label24.Visible = False
+        '
+        'txtMNDNRNumber
+        '
+        Me.txtMNDNRNumber.Enabled = False
+        Me.txtMNDNRNumber.Location = New System.Drawing.Point(299, 674)
+        Me.txtMNDNRNumber.Name = "txtMNDNRNumber"
+        Me.txtMNDNRNumber.npc_DefaultValue = Nothing
+        Me.txtMNDNRNumber.npc_FieldName = "MNDNR_Number"
+        Me.txtMNDNRNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtMNDNRNumber.Size = New System.Drawing.Size(118, 20)
+        Me.txtMNDNRNumber.TabIndex = 30
         '
         'frmMain
         '
