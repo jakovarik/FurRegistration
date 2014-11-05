@@ -205,7 +205,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub cbxJuevenile_CheckedChanged(sender As Object, e As EventArgs) Handles cbxJuevenile.CheckedChanged
+    Private Sub cbxJuevenile_CheckedChanged(sender As Object, e As EventArgs)
         'put code here to genereate new number with 9999 prefix
 
     End Sub
