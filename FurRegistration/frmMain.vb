@@ -209,4 +209,14 @@ Public Class frmMain
         'put code here to genereate new number with 9999 prefix
 
     End Sub
+
+    Private Sub btnBackupDatabase_Click(sender As Object, e As EventArgs) Handles btnBackupDatabase.Click
+        'put code here to call the Backup Database code
+        Database_Backup()
+
+    End Sub
+
+    Private Sub txtMNDNRNumber_TextChanged(sender As Object, e As EventArgs) Handles txtMNDNRNumber.TextChanged
+
+    End Sub
 End Class

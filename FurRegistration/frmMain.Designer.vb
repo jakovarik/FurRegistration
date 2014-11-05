@@ -33,39 +33,13 @@ Partial Class frmMain
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.btnNewTrapper = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cboMNDNRNumber = New FurRegistration.clsCombobox()
-        Me.cbxJuevenile = New FurRegistration.clsCheckbox(Me.components)
-        Me.txtTagNumber = New FurRegistration.clsTextbox(Me.components)
-        Me.clsDateTimeRegistered = New FurRegistration.clsDateTimePicker(Me.components)
-        Me.clsCurrentDateTime = New FurRegistration.clsDateTimePicker(Me.components)
-        Me.cboTrapType = New FurRegistration.clsCombobox()
-        Me.cboHuntType = New FurRegistration.clsCombobox()
-        Me.cboTakeMethod = New FurRegistration.clsCombobox()
-        Me.cboSex = New FurRegistration.clsCombobox()
-        Me.cboSpecies = New FurRegistration.clsCombobox()
-        Me.cboStation = New FurRegistration.clsCombobox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.txtZip = New FurRegistration.clsTextbox(Me.components)
-        Me.txtState = New FurRegistration.clsTextbox(Me.components)
-        Me.txtCity = New FurRegistration.clsTextbox(Me.components)
-        Me.txtAddress = New FurRegistration.clsTextbox(Me.components)
-        Me.txtLastName = New FurRegistration.clsTextbox(Me.components)
-        Me.txtFirstName = New FurRegistration.clsTextbox(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.txtCountyName = New FurRegistration.clsTextbox(Me.components)
-        Me.txtCountyNumber = New FurRegistration.clsTextbox(Me.components)
-        Me.txtRangeDirection = New FurRegistration.clsTextbox(Me.components)
-        Me.txtRange = New FurRegistration.clsTextbox(Me.components)
-        Me.txtTownship = New FurRegistration.clsTextbox(Me.components)
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -79,16 +53,45 @@ Partial Class frmMain
         Me.txtYCoord = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.cboMNDNRNumber = New FurRegistration.clsCombobox()
+        Me.clsDateTimeRegistered = New FurRegistration.clsDateTimePicker(Me.components)
+        Me.txtTagNumber = New FurRegistration.clsTextbox(Me.components)
+        Me.clsCurrentDateTime = New FurRegistration.clsDateTimePicker(Me.components)
+        Me.cboTrapType = New FurRegistration.clsCombobox()
+        Me.cboHuntType = New FurRegistration.clsCombobox()
+        Me.cboStation = New FurRegistration.clsCombobox()
+        Me.cboTakeMethod = New FurRegistration.clsCombobox()
+        Me.cboSpecies = New FurRegistration.clsCombobox()
+        Me.cboSex = New FurRegistration.clsCombobox()
+        Me.btnNewTrapper = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.txtZip = New FurRegistration.clsTextbox(Me.components)
+        Me.txtState = New FurRegistration.clsTextbox(Me.components)
+        Me.txtCity = New FurRegistration.clsTextbox(Me.components)
+        Me.txtAddress = New FurRegistration.clsTextbox(Me.components)
+        Me.txtLastName = New FurRegistration.clsTextbox(Me.components)
+        Me.txtFirstName = New FurRegistration.clsTextbox(Me.components)
         Me.txtMNDNRNumber = New FurRegistration.clsTextbox(Me.components)
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.txtCountyName = New FurRegistration.clsTextbox(Me.components)
+        Me.txtCountyNumber = New FurRegistration.clsTextbox(Me.components)
+        Me.txtRangeDirection = New FurRegistration.clsTextbox(Me.components)
+        Me.txtRange = New FurRegistration.clsTextbox(Me.components)
+        Me.txtTownship = New FurRegistration.clsTextbox(Me.components)
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.cbxJuevenile = New FurRegistration.clsCheckbox(Me.components)
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(177, 80)
+        Me.Label1.Location = New System.Drawing.Point(84, 34)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 0
@@ -96,8 +99,9 @@ Partial Class frmMain
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(172, 110)
+        Me.Label3.Location = New System.Drawing.Point(79, 61)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(48, 13)
         Me.Label3.TabIndex = 3
@@ -105,8 +109,9 @@ Partial Class frmMain
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(192, 146)
+        Me.Label2.Location = New System.Drawing.Point(99, 88)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(28, 13)
         Me.Label2.TabIndex = 5
@@ -114,8 +119,9 @@ Partial Class frmMain
         '
         'Label4
         '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(151, 175)
+        Me.Label4.Location = New System.Drawing.Point(58, 114)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(69, 13)
         Me.Label4.TabIndex = 6
@@ -123,17 +129,20 @@ Partial Class frmMain
         '
         'Label5
         '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(159, 39)
+        Me.Label5.Location = New System.Drawing.Point(66, 7)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(61, 13)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "MNDNR #:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label6
         '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(151, 210)
+        Me.Label6.Location = New System.Drawing.Point(53, 141)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(74, 13)
         Me.Label6.TabIndex = 11
@@ -141,8 +150,9 @@ Partial Class frmMain
         '
         'Label7
         '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(159, 247)
+        Me.Label7.Location = New System.Drawing.Point(67, 168)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 13)
         Me.Label7.TabIndex = 13
@@ -150,8 +160,9 @@ Partial Class frmMain
         '
         'Label8
         '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(159, 287)
+        Me.Label8.Location = New System.Drawing.Point(68, 195)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(59, 13)
         Me.Label8.TabIndex = 15
@@ -159,8 +170,9 @@ Partial Class frmMain
         '
         'Label9
         '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(80, 321)
+        Me.Label9.Location = New System.Drawing.Point(23, 221)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(104, 13)
         Me.Label9.TabIndex = 17
@@ -168,190 +180,19 @@ Partial Class frmMain
         '
         'Label10
         '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(60, 359)
+        Me.Label10.Location = New System.Drawing.Point(3, 249)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(124, 13)
         Me.Label10.TabIndex = 19
         Me.Label10.Text = "Date Registered (mmdd):"
         '
-        'btnNewTrapper
-        '
-        Me.btnNewTrapper.ForeColor = System.Drawing.Color.Red
-        Me.btnNewTrapper.Location = New System.Drawing.Point(49, 91)
-        Me.btnNewTrapper.Name = "btnNewTrapper"
-        Me.btnNewTrapper.Size = New System.Drawing.Size(75, 36)
-        Me.btnNewTrapper.TabIndex = 19
-        Me.btnNewTrapper.Text = "New Trapper"
-        Me.btnNewTrapper.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.cboMNDNRNumber)
-        Me.GroupBox1.Controls.Add(Me.cbxJuevenile)
-        Me.GroupBox1.Controls.Add(Me.txtTagNumber)
-        Me.GroupBox1.Controls.Add(Me.clsDateTimeRegistered)
-        Me.GroupBox1.Controls.Add(Me.clsCurrentDateTime)
-        Me.GroupBox1.Controls.Add(Me.cboTrapType)
-        Me.GroupBox1.Controls.Add(Me.cboHuntType)
-        Me.GroupBox1.Controls.Add(Me.cboTakeMethod)
-        Me.GroupBox1.Controls.Add(Me.cboSex)
-        Me.GroupBox1.Controls.Add(Me.cboSpecies)
-        Me.GroupBox1.Controls.Add(Me.cboStation)
-        Me.GroupBox1.Controls.Add(Me.btnNewTrapper)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(36, 22)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(404, 389)
-        Me.GroupBox1.TabIndex = 23
-        Me.GroupBox1.TabStop = False
-        '
-        'cboMNDNRNumber
-        '
-        Me.cboMNDNRNumber.DefaultValue = Nothing
-        Me.cboMNDNRNumber.FormattingEnabled = True
-        Me.cboMNDNRNumber.Location = New System.Drawing.Point(228, 36)
-        Me.cboMNDNRNumber.Name = "cboMNDNRNumber"
-        Me.cboMNDNRNumber.npc_FieldName = "hello"
-        Me.cboMNDNRNumber.Size = New System.Drawing.Size(121, 21)
-        Me.cboMNDNRNumber.TabIndex = 1
-        Me.cboMNDNRNumber.Tag = "custid"
-        '
-        'cbxJuevenile
-        '
-        Me.cbxJuevenile.AutoSize = True
-        Me.cbxJuevenile.ForeColor = System.Drawing.Color.Red
-        Me.cbxJuevenile.Location = New System.Drawing.Point(59, 154)
-        Me.cbxJuevenile.Name = "cbxJuevenile"
-        Me.cbxJuevenile.npc_FieldName = ""
-        Me.cbxJuevenile.Size = New System.Drawing.Size(65, 17)
-        Me.cbxJuevenile.TabIndex = 33
-        Me.cbxJuevenile.Text = "Juvenile"
-        Me.cbxJuevenile.UseVisualStyleBackColor = True
-        '
-        'txtTagNumber
-        '
-        Me.txtTagNumber.Location = New System.Drawing.Point(228, 173)
-        Me.txtTagNumber.MaxLength = 8
-        Me.txtTagNumber.Name = "txtTagNumber"
-        Me.txtTagNumber.npc_DefaultValue = Nothing
-        Me.txtTagNumber.npc_FieldName = "Tag_Number"
-        Me.txtTagNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtTagNumber.Size = New System.Drawing.Size(120, 20)
-        Me.txtTagNumber.TabIndex = 5
-        '
-        'clsDateTimeRegistered
-        '
-        Me.clsDateTimeRegistered.DefaultValue = Nothing
-        Me.clsDateTimeRegistered.FieldName = "Date_Registered"
-        Me.clsDateTimeRegistered.Location = New System.Drawing.Point(188, 353)
-        Me.clsDateTimeRegistered.Name = "clsDateTimeRegistered"
-        Me.clsDateTimeRegistered.Size = New System.Drawing.Size(200, 20)
-        Me.clsDateTimeRegistered.TabIndex = 10
-        '
-        'clsCurrentDateTime
-        '
-        Me.clsCurrentDateTime.DefaultValue = Nothing
-        Me.clsCurrentDateTime.FieldName = "Date_Taken"
-        Me.clsCurrentDateTime.Location = New System.Drawing.Point(190, 315)
-        Me.clsCurrentDateTime.Name = "clsCurrentDateTime"
-        Me.clsCurrentDateTime.Size = New System.Drawing.Size(200, 20)
-        Me.clsCurrentDateTime.TabIndex = 9
-        '
-        'cboTrapType
-        '
-        Me.cboTrapType.DefaultValue = Nothing
-        Me.cboTrapType.FormattingEnabled = True
-        Me.cboTrapType.Location = New System.Drawing.Point(227, 284)
-        Me.cboTrapType.Name = "cboTrapType"
-        Me.cboTrapType.npc_FieldName = "Trap_Type"
-        Me.cboTrapType.Size = New System.Drawing.Size(121, 21)
-        Me.cboTrapType.TabIndex = 8
-        '
-        'cboHuntType
-        '
-        Me.cboHuntType.DefaultValue = Nothing
-        Me.cboHuntType.FormattingEnabled = True
-        Me.cboHuntType.Location = New System.Drawing.Point(227, 247)
-        Me.cboHuntType.Name = "cboHuntType"
-        Me.cboHuntType.npc_FieldName = "Hunt_Type"
-        Me.cboHuntType.Size = New System.Drawing.Size(121, 21)
-        Me.cboHuntType.TabIndex = 7
-        '
-        'cboTakeMethod
-        '
-        Me.cboTakeMethod.DefaultValue = Nothing
-        Me.cboTakeMethod.FormattingEnabled = True
-        Me.cboTakeMethod.Location = New System.Drawing.Point(227, 207)
-        Me.cboTakeMethod.Name = "cboTakeMethod"
-        Me.cboTakeMethod.npc_FieldName = "Take_Method"
-        Me.cboTakeMethod.Size = New System.Drawing.Size(121, 21)
-        Me.cboTakeMethod.TabIndex = 6
-        '
-        'cboSex
-        '
-        Me.cboSex.DefaultValue = Nothing
-        Me.cboSex.FormattingEnabled = True
-        Me.cboSex.Location = New System.Drawing.Point(227, 146)
-        Me.cboSex.Name = "cboSex"
-        Me.cboSex.npc_FieldName = "Sex"
-        Me.cboSex.Size = New System.Drawing.Size(121, 21)
-        Me.cboSex.TabIndex = 4
-        '
-        'cboSpecies
-        '
-        Me.cboSpecies.DefaultValue = Nothing
-        Me.cboSpecies.FormattingEnabled = True
-        Me.cboSpecies.Location = New System.Drawing.Point(227, 110)
-        Me.cboSpecies.Name = "cboSpecies"
-        Me.cboSpecies.npc_FieldName = "Species"
-        Me.cboSpecies.Size = New System.Drawing.Size(121, 21)
-        Me.cboSpecies.TabIndex = 3
-        '
-        'cboStation
-        '
-        Me.cboStation.DefaultValue = Nothing
-        Me.cboStation.FormattingEnabled = True
-        Me.cboStation.Location = New System.Drawing.Point(227, 77)
-        Me.cboStation.Name = "cboStation"
-        Me.cboStation.npc_FieldName = "Station"
-        Me.cboStation.Size = New System.Drawing.Size(121, 21)
-        Me.cboStation.TabIndex = 2
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label23)
-        Me.GroupBox2.Controls.Add(Me.Label22)
-        Me.GroupBox2.Controls.Add(Me.txtZip)
-        Me.GroupBox2.Controls.Add(Me.txtState)
-        Me.GroupBox2.Controls.Add(Me.txtCity)
-        Me.GroupBox2.Controls.Add(Me.txtAddress)
-        Me.GroupBox2.Controls.Add(Me.txtLastName)
-        Me.GroupBox2.Controls.Add(Me.txtFirstName)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Location = New System.Drawing.Point(36, 434)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(404, 270)
-        Me.GroupBox2.TabIndex = 24
-        Me.GroupBox2.TabStop = False
-        '
         'Label23
         '
+        Me.Label23.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(54, 212)
+        Me.Label23.Location = New System.Drawing.Point(75, 169)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(53, 13)
         Me.Label23.TabIndex = 29
@@ -359,88 +200,30 @@ Partial Class frmMain
         '
         'Label22
         '
+        Me.Label22.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(73, 178)
+        Me.Label22.Location = New System.Drawing.Point(93, 137)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(35, 13)
         Me.Label22.TabIndex = 28
         Me.Label22.Text = "State:"
         '
-        'txtZip
-        '
-        Me.txtZip.Location = New System.Drawing.Point(113, 209)
-        Me.txtZip.Name = "txtZip"
-        Me.txtZip.npc_DefaultValue = Nothing
-        Me.txtZip.npc_FieldName = "Zip"
-        Me.txtZip.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtZip.Size = New System.Drawing.Size(268, 20)
-        Me.txtZip.TabIndex = 27
-        '
-        'txtState
-        '
-        Me.txtState.Location = New System.Drawing.Point(113, 175)
-        Me.txtState.Name = "txtState"
-        Me.txtState.npc_DefaultValue = Nothing
-        Me.txtState.npc_FieldName = "State"
-        Me.txtState.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtState.Size = New System.Drawing.Size(268, 20)
-        Me.txtState.TabIndex = 26
-        '
-        'txtCity
-        '
-        Me.txtCity.Location = New System.Drawing.Point(113, 140)
-        Me.txtCity.Name = "txtCity"
-        Me.txtCity.npc_DefaultValue = Nothing
-        Me.txtCity.npc_FieldName = "City"
-        Me.txtCity.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtCity.Size = New System.Drawing.Size(268, 20)
-        Me.txtCity.TabIndex = 25
-        '
-        'txtAddress
-        '
-        Me.txtAddress.Location = New System.Drawing.Point(113, 100)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.npc_DefaultValue = Nothing
-        Me.txtAddress.npc_FieldName = "Address"
-        Me.txtAddress.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtAddress.Size = New System.Drawing.Size(268, 20)
-        Me.txtAddress.TabIndex = 24
-        '
-        'txtLastName
-        '
-        Me.txtLastName.Location = New System.Drawing.Point(114, 70)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.npc_DefaultValue = Nothing
-        Me.txtLastName.npc_FieldName = "Last_Name"
-        Me.txtLastName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtLastName.Size = New System.Drawing.Size(268, 20)
-        Me.txtLastName.TabIndex = 23
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFirstName.Location = New System.Drawing.Point(114, 33)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.npc_DefaultValue = Nothing
-        Me.txtFirstName.npc_FieldName = "First_Name"
-        Me.txtFirstName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtFirstName.Size = New System.Drawing.Size(268, 20)
-        Me.txtFirstName.TabIndex = 22
-        '
         'Button1
         '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Button1.ForeColor = System.Drawing.Color.Red
-        Me.Button1.Location = New System.Drawing.Point(114, 235)
+        Me.Button1.Location = New System.Drawing.Point(3, 195)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 29)
+        Me.Button1.Size = New System.Drawing.Size(125, 28)
         Me.Button1.TabIndex = 20
         Me.Button1.Text = "Search by Name"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label11
         '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(46, 73)
+        Me.Label11.Location = New System.Drawing.Point(67, 41)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(61, 13)
         Me.Label11.TabIndex = 0
@@ -448,8 +231,9 @@ Partial Class frmMain
         '
         'Label12
         '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(60, 107)
+        Me.Label12.Location = New System.Drawing.Point(80, 73)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(48, 13)
         Me.Label12.TabIndex = 3
@@ -457,8 +241,9 @@ Partial Class frmMain
         '
         'Label14
         '
+        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(80, 143)
+        Me.Label14.Location = New System.Drawing.Point(101, 105)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(27, 13)
         Me.Label14.TabIndex = 5
@@ -466,88 +251,19 @@ Partial Class frmMain
         '
         'Label17
         '
+        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(47, 36)
+        Me.Label17.Location = New System.Drawing.Point(68, 9)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(60, 13)
         Me.Label17.TabIndex = 7
         Me.Label17.Text = "First Name:"
         '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.txtCountyName)
-        Me.GroupBox3.Controls.Add(Me.txtCountyNumber)
-        Me.GroupBox3.Controls.Add(Me.txtRangeDirection)
-        Me.GroupBox3.Controls.Add(Me.txtRange)
-        Me.GroupBox3.Controls.Add(Me.txtTownship)
-        Me.GroupBox3.Controls.Add(Me.Label20)
-        Me.GroupBox3.Controls.Add(Me.Label19)
-        Me.GroupBox3.Controls.Add(Me.Label13)
-        Me.GroupBox3.Controls.Add(Me.Label15)
-        Me.GroupBox3.Controls.Add(Me.Label18)
-        Me.GroupBox3.Location = New System.Drawing.Point(460, 41)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(388, 216)
-        Me.GroupBox3.TabIndex = 25
-        Me.GroupBox3.TabStop = False
-        '
-        'txtCountyName
-        '
-        Me.txtCountyName.Location = New System.Drawing.Point(109, 171)
-        Me.txtCountyName.Name = "txtCountyName"
-        Me.txtCountyName.npc_DefaultValue = Nothing
-        Me.txtCountyName.npc_FieldName = "County_Name"
-        Me.txtCountyName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtCountyName.Size = New System.Drawing.Size(268, 20)
-        Me.txtCountyName.TabIndex = 15
-        '
-        'txtCountyNumber
-        '
-        Me.txtCountyNumber.Location = New System.Drawing.Point(109, 135)
-        Me.txtCountyNumber.Name = "txtCountyNumber"
-        Me.txtCountyNumber.npc_DefaultValue = Nothing
-        Me.txtCountyNumber.npc_FieldName = "County_Number"
-        Me.txtCountyNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtCountyNumber.Size = New System.Drawing.Size(268, 20)
-        Me.txtCountyNumber.TabIndex = 14
-        '
-        'txtRangeDirection
-        '
-        Me.txtRangeDirection.Location = New System.Drawing.Point(109, 101)
-        Me.txtRangeDirection.MaxLength = 1
-        Me.txtRangeDirection.Name = "txtRangeDirection"
-        Me.txtRangeDirection.npc_DefaultValue = Nothing
-        Me.txtRangeDirection.npc_FieldName = "Range_Direction"
-        Me.txtRangeDirection.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtRangeDirection.Size = New System.Drawing.Size(268, 20)
-        Me.txtRangeDirection.TabIndex = 13
-        '
-        'txtRange
-        '
-        Me.txtRange.Location = New System.Drawing.Point(109, 68)
-        Me.txtRange.MaxLength = 2
-        Me.txtRange.Name = "txtRange"
-        Me.txtRange.npc_DefaultValue = Nothing
-        Me.txtRange.npc_FieldName = "Range"
-        Me.txtRange.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtRange.Size = New System.Drawing.Size(268, 20)
-        Me.txtRange.TabIndex = 12
-        '
-        'txtTownship
-        '
-        Me.txtTownship.Location = New System.Drawing.Point(109, 33)
-        Me.txtTownship.MaxLength = 3
-        Me.txtTownship.Name = "txtTownship"
-        Me.txtTownship.npc_DefaultValue = Nothing
-        Me.txtTownship.npc_FieldName = "Township"
-        Me.txtTownship.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtTownship.Size = New System.Drawing.Size(268, 20)
-        Me.txtTownship.TabIndex = 11
-        '
         'Label20
         '
+        Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(29, 174)
+        Me.Label20.Location = New System.Drawing.Point(15, 193)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(74, 13)
         Me.Label20.TabIndex = 13
@@ -555,8 +271,9 @@ Partial Class frmMain
         '
         'Label19
         '
+        Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(24, 138)
+        Me.Label19.Location = New System.Drawing.Point(6, 147)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(83, 13)
         Me.Label19.TabIndex = 11
@@ -564,8 +281,9 @@ Partial Class frmMain
         '
         'Label13
         '
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(61, 73)
+        Me.Label13.Location = New System.Drawing.Point(47, 59)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(42, 13)
         Me.Label13.TabIndex = 0
@@ -573,8 +291,9 @@ Partial Class frmMain
         '
         'Label15
         '
+        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(17, 101)
+        Me.Label15.Location = New System.Drawing.Point(3, 97)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(86, 26)
         Me.Label15.TabIndex = 3
@@ -582,8 +301,9 @@ Partial Class frmMain
         '
         'Label18
         '
+        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(47, 36)
+        Me.Label18.Location = New System.Drawing.Point(33, 15)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(56, 13)
         Me.Label18.TabIndex = 7
@@ -591,8 +311,9 @@ Partial Class frmMain
         '
         'btnEnter
         '
+        Me.btnEnter.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnEnter.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnEnter.Location = New System.Drawing.Point(573, 370)
+        Me.btnEnter.Location = New System.Drawing.Point(28, 13)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(170, 56)
         Me.btnEnter.TabIndex = 16
@@ -601,8 +322,9 @@ Partial Class frmMain
         '
         'btnClose
         '
+        Me.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnClose.Location = New System.Drawing.Point(573, 454)
+        Me.btnClose.Location = New System.Drawing.Point(28, 97)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(170, 54)
         Me.btnClose.TabIndex = 17
@@ -611,18 +333,21 @@ Partial Class frmMain
         '
         'btnBackupDatabase
         '
-        Me.btnBackupDatabase.ForeColor = System.Drawing.Color.Red
-        Me.btnBackupDatabase.Location = New System.Drawing.Point(573, 527)
+        Me.btnBackupDatabase.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnBackupDatabase.ForeColor = System.Drawing.Color.Black
+        Me.btnBackupDatabase.Location = New System.Drawing.Point(28, 176)
         Me.btnBackupDatabase.Name = "btnBackupDatabase"
-        Me.btnBackupDatabase.Size = New System.Drawing.Size(170, 45)
+        Me.btnBackupDatabase.Size = New System.Drawing.Size(170, 52)
         Me.btnBackupDatabase.TabIndex = 18
         Me.btnBackupDatabase.Text = "Backup Database"
         Me.btnBackupDatabase.UseVisualStyleBackColor = True
         '
         'Label21
         '
+        Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(570, 609)
+        Me.Label21.ForeColor = System.Drawing.Color.Red
+        Me.Label21.Location = New System.Drawing.Point(3, 248)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(77, 13)
         Me.Label21.TabIndex = 23
@@ -666,42 +391,417 @@ Partial Class frmMain
         Me.Label24.Text = "Y Coord:"
         Me.Label24.Visible = False
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.AutoSize = True
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.Controls.Add(Me.cboMNDNRNumber, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.clsDateTimeRegistered, 1, 9)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtTagNumber, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.clsCurrentDateTime, 1, 8)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 9)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.cboTrapType, 1, 7)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label9, 0, 8)
+        Me.TableLayoutPanel1.Controls.Add(Me.cboHuntType, 1, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.cboStation, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.cboTakeMethod, 1, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label8, 0, 7)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.cboSpecies, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label7, 0, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.cboSex, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 5)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 27)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 10
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(336, 270)
+        Me.TableLayoutPanel1.TabIndex = 34
+        '
+        'cboMNDNRNumber
+        '
+        Me.cboMNDNRNumber.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.cboMNDNRNumber.DefaultValue = Nothing
+        Me.cboMNDNRNumber.FormattingEnabled = True
+        Me.cboMNDNRNumber.Location = New System.Drawing.Point(133, 3)
+        Me.cboMNDNRNumber.Name = "cboMNDNRNumber"
+        Me.cboMNDNRNumber.npc_FieldName = "hello"
+        Me.cboMNDNRNumber.Size = New System.Drawing.Size(121, 21)
+        Me.cboMNDNRNumber.TabIndex = 1
+        Me.cboMNDNRNumber.Tag = "custid"
+        '
+        'clsDateTimeRegistered
+        '
+        Me.clsDateTimeRegistered.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.clsDateTimeRegistered.DefaultValue = Nothing
+        Me.clsDateTimeRegistered.FieldName = "Date_Registered"
+        Me.clsDateTimeRegistered.Location = New System.Drawing.Point(133, 245)
+        Me.clsDateTimeRegistered.Name = "clsDateTimeRegistered"
+        Me.clsDateTimeRegistered.Size = New System.Drawing.Size(200, 20)
+        Me.clsDateTimeRegistered.TabIndex = 10
+        '
+        'txtTagNumber
+        '
+        Me.txtTagNumber.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtTagNumber.Location = New System.Drawing.Point(133, 111)
+        Me.txtTagNumber.MaxLength = 8
+        Me.txtTagNumber.Name = "txtTagNumber"
+        Me.txtTagNumber.npc_DefaultValue = Nothing
+        Me.txtTagNumber.npc_FieldName = "Tag_Number"
+        Me.txtTagNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtTagNumber.Size = New System.Drawing.Size(120, 20)
+        Me.txtTagNumber.TabIndex = 5
+        '
+        'clsCurrentDateTime
+        '
+        Me.clsCurrentDateTime.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.clsCurrentDateTime.DefaultValue = Nothing
+        Me.clsCurrentDateTime.FieldName = "Date_Taken"
+        Me.clsCurrentDateTime.Location = New System.Drawing.Point(133, 218)
+        Me.clsCurrentDateTime.Name = "clsCurrentDateTime"
+        Me.clsCurrentDateTime.Size = New System.Drawing.Size(200, 20)
+        Me.clsCurrentDateTime.TabIndex = 9
+        '
+        'cboTrapType
+        '
+        Me.cboTrapType.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.cboTrapType.DefaultValue = Nothing
+        Me.cboTrapType.FormattingEnabled = True
+        Me.cboTrapType.Location = New System.Drawing.Point(133, 191)
+        Me.cboTrapType.Name = "cboTrapType"
+        Me.cboTrapType.npc_FieldName = "Trap_Type"
+        Me.cboTrapType.Size = New System.Drawing.Size(121, 21)
+        Me.cboTrapType.TabIndex = 8
+        '
+        'cboHuntType
+        '
+        Me.cboHuntType.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.cboHuntType.DefaultValue = Nothing
+        Me.cboHuntType.FormattingEnabled = True
+        Me.cboHuntType.Location = New System.Drawing.Point(133, 164)
+        Me.cboHuntType.Name = "cboHuntType"
+        Me.cboHuntType.npc_FieldName = "Hunt_Type"
+        Me.cboHuntType.Size = New System.Drawing.Size(121, 21)
+        Me.cboHuntType.TabIndex = 7
+        '
+        'cboStation
+        '
+        Me.cboStation.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.cboStation.DefaultValue = Nothing
+        Me.cboStation.FormattingEnabled = True
+        Me.cboStation.Location = New System.Drawing.Point(133, 30)
+        Me.cboStation.Name = "cboStation"
+        Me.cboStation.npc_FieldName = "Station"
+        Me.cboStation.Size = New System.Drawing.Size(121, 21)
+        Me.cboStation.TabIndex = 2
+        '
+        'cboTakeMethod
+        '
+        Me.cboTakeMethod.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.cboTakeMethod.DefaultValue = Nothing
+        Me.cboTakeMethod.FormattingEnabled = True
+        Me.cboTakeMethod.Location = New System.Drawing.Point(133, 137)
+        Me.cboTakeMethod.Name = "cboTakeMethod"
+        Me.cboTakeMethod.npc_FieldName = "Take_Method"
+        Me.cboTakeMethod.Size = New System.Drawing.Size(121, 21)
+        Me.cboTakeMethod.TabIndex = 6
+        '
+        'cboSpecies
+        '
+        Me.cboSpecies.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.cboSpecies.DefaultValue = Nothing
+        Me.cboSpecies.FormattingEnabled = True
+        Me.cboSpecies.Location = New System.Drawing.Point(133, 57)
+        Me.cboSpecies.Name = "cboSpecies"
+        Me.cboSpecies.npc_FieldName = "Species"
+        Me.cboSpecies.Size = New System.Drawing.Size(121, 21)
+        Me.cboSpecies.TabIndex = 3
+        '
+        'cboSex
+        '
+        Me.cboSex.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.cboSex.DefaultValue = Nothing
+        Me.cboSex.FormattingEnabled = True
+        Me.cboSex.Location = New System.Drawing.Point(133, 84)
+        Me.cboSex.Name = "cboSex"
+        Me.cboSex.npc_FieldName = "Sex"
+        Me.cboSex.Size = New System.Drawing.Size(121, 21)
+        Me.cboSex.TabIndex = 4
+        '
+        'btnNewTrapper
+        '
+        Me.btnNewTrapper.ForeColor = System.Drawing.Color.Red
+        Me.btnNewTrapper.Location = New System.Drawing.Point(152, 378)
+        Me.btnNewTrapper.Name = "btnNewTrapper"
+        Me.btnNewTrapper.Size = New System.Drawing.Size(75, 36)
+        Me.btnNewTrapper.TabIndex = 19
+        Me.btnNewTrapper.Text = "New Trapper"
+        Me.btnNewTrapper.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel2.Controls.Add(Me.txtZip, 1, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 0, 6)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label23, 0, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtState, 1, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label17, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtCity, 1, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label22, 0, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtAddress, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label11, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtLastName, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label12, 0, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtFirstName, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label14, 0, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtMNDNRNumber, 1, 6)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(18, 433)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 7
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(433, 226)
+        Me.TableLayoutPanel2.TabIndex = 35
+        '
+        'txtZip
+        '
+        Me.txtZip.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtZip.Location = New System.Drawing.Point(134, 166)
+        Me.txtZip.Name = "txtZip"
+        Me.txtZip.npc_DefaultValue = Nothing
+        Me.txtZip.npc_FieldName = "Zip"
+        Me.txtZip.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtZip.Size = New System.Drawing.Size(268, 20)
+        Me.txtZip.TabIndex = 27
+        '
+        'txtState
+        '
+        Me.txtState.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtState.Location = New System.Drawing.Point(134, 134)
+        Me.txtState.Name = "txtState"
+        Me.txtState.npc_DefaultValue = Nothing
+        Me.txtState.npc_FieldName = "State"
+        Me.txtState.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtState.Size = New System.Drawing.Size(268, 20)
+        Me.txtState.TabIndex = 26
+        '
+        'txtCity
+        '
+        Me.txtCity.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtCity.Location = New System.Drawing.Point(134, 102)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.npc_DefaultValue = Nothing
+        Me.txtCity.npc_FieldName = "City"
+        Me.txtCity.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtCity.Size = New System.Drawing.Size(268, 20)
+        Me.txtCity.TabIndex = 25
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtAddress.Location = New System.Drawing.Point(134, 70)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.npc_DefaultValue = Nothing
+        Me.txtAddress.npc_FieldName = "Address"
+        Me.txtAddress.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtAddress.Size = New System.Drawing.Size(268, 20)
+        Me.txtAddress.TabIndex = 24
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtLastName.Location = New System.Drawing.Point(134, 38)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.npc_DefaultValue = Nothing
+        Me.txtLastName.npc_FieldName = "Last_Name"
+        Me.txtLastName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtLastName.Size = New System.Drawing.Size(268, 20)
+        Me.txtLastName.TabIndex = 23
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtFirstName.Location = New System.Drawing.Point(134, 6)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.npc_DefaultValue = Nothing
+        Me.txtFirstName.npc_FieldName = "First_Name"
+        Me.txtFirstName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtFirstName.Size = New System.Drawing.Size(268, 20)
+        Me.txtFirstName.TabIndex = 22
+        '
         'txtMNDNRNumber
         '
+        Me.txtMNDNRNumber.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.txtMNDNRNumber.Enabled = False
-        Me.txtMNDNRNumber.Location = New System.Drawing.Point(299, 674)
+        Me.txtMNDNRNumber.Location = New System.Drawing.Point(134, 199)
         Me.txtMNDNRNumber.Name = "txtMNDNRNumber"
         Me.txtMNDNRNumber.npc_DefaultValue = Nothing
         Me.txtMNDNRNumber.npc_FieldName = "MNDNR_Number"
         Me.txtMNDNRNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtMNDNRNumber.Size = New System.Drawing.Size(118, 20)
+        Me.txtMNDNRNumber.Size = New System.Drawing.Size(268, 20)
         Me.txtMNDNRNumber.TabIndex = 30
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 2
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel3.Controls.Add(Me.txtCountyName, 1, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label18, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtCountyNumber, 1, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label13, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtRangeDirection, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label15, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtRange, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label19, 0, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtTownship, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label20, 0, 4)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(507, 27)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 5
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(323, 223)
+        Me.TableLayoutPanel3.TabIndex = 36
+        '
+        'txtCountyName
+        '
+        Me.txtCountyName.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtCountyName.Location = New System.Drawing.Point(95, 189)
+        Me.txtCountyName.Name = "txtCountyName"
+        Me.txtCountyName.npc_DefaultValue = Nothing
+        Me.txtCountyName.npc_FieldName = "County_Name"
+        Me.txtCountyName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtCountyName.Size = New System.Drawing.Size(268, 20)
+        Me.txtCountyName.TabIndex = 15
+        '
+        'txtCountyNumber
+        '
+        Me.txtCountyNumber.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtCountyNumber.Location = New System.Drawing.Point(95, 144)
+        Me.txtCountyNumber.Name = "txtCountyNumber"
+        Me.txtCountyNumber.npc_DefaultValue = Nothing
+        Me.txtCountyNumber.npc_FieldName = "County_Number"
+        Me.txtCountyNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtCountyNumber.Size = New System.Drawing.Size(268, 20)
+        Me.txtCountyNumber.TabIndex = 14
+        '
+        'txtRangeDirection
+        '
+        Me.txtRangeDirection.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtRangeDirection.Location = New System.Drawing.Point(95, 100)
+        Me.txtRangeDirection.MaxLength = 1
+        Me.txtRangeDirection.Name = "txtRangeDirection"
+        Me.txtRangeDirection.npc_DefaultValue = Nothing
+        Me.txtRangeDirection.npc_FieldName = "Range_Direction"
+        Me.txtRangeDirection.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtRangeDirection.Size = New System.Drawing.Size(268, 20)
+        Me.txtRangeDirection.TabIndex = 13
+        '
+        'txtRange
+        '
+        Me.txtRange.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtRange.Location = New System.Drawing.Point(95, 56)
+        Me.txtRange.MaxLength = 2
+        Me.txtRange.Name = "txtRange"
+        Me.txtRange.npc_DefaultValue = Nothing
+        Me.txtRange.npc_FieldName = "Range"
+        Me.txtRange.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtRange.Size = New System.Drawing.Size(268, 20)
+        Me.txtRange.TabIndex = 12
+        '
+        'txtTownship
+        '
+        Me.txtTownship.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtTownship.Location = New System.Drawing.Point(95, 12)
+        Me.txtTownship.MaxLength = 3
+        Me.txtTownship.Name = "txtTownship"
+        Me.txtTownship.npc_DefaultValue = Nothing
+        Me.txtTownship.npc_FieldName = "Township"
+        Me.txtTownship.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtTownship.Size = New System.Drawing.Size(268, 20)
+        Me.txtTownship.TabIndex = 11
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 1
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.btnEnter, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.btnClose, 0, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.btnBackupDatabase, 0, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label21, 0, 3)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(543, 345)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 4
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(226, 270)
+        Me.TableLayoutPanel4.TabIndex = 37
+        '
+        'cbxJuevenile
+        '
+        Me.cbxJuevenile.AutoSize = True
+        Me.cbxJuevenile.ForeColor = System.Drawing.Color.Red
+        Me.cbxJuevenile.Location = New System.Drawing.Point(258, 389)
+        Me.cbxJuevenile.Name = "cbxJuevenile"
+        Me.cbxJuevenile.npc_FieldName = ""
+        Me.cbxJuevenile.Size = New System.Drawing.Size(65, 17)
+        Me.cbxJuevenile.TabIndex = 33
+        Me.cbxJuevenile.Text = "Juvenile"
+        Me.cbxJuevenile.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(874, 733)
+        Me.ClientSize = New System.Drawing.Size(883, 733)
+        Me.Controls.Add(Me.TableLayoutPanel4)
+        Me.Controls.Add(Me.TableLayoutPanel3)
+        Me.Controls.Add(Me.TableLayoutPanel2)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.cbxJuevenile)
         Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.btnNewTrapper)
         Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.txtYCoord)
         Me.Controls.Add(Me.txtXCoord)
-        Me.Controls.Add(Me.txtMNDNRNumber)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.btnBackupDatabase)
-        Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.btnEnter)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmMain"
         Me.Text = "Furbearer Registration Form"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
+        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.TableLayoutPanel4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -716,15 +816,11 @@ Partial Class frmMain
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents btnNewTrapper As System.Windows.Forms.Button
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
@@ -734,7 +830,6 @@ Partial Class frmMain
     Friend WithEvents btnClose As System.Windows.Forms.Button
     Friend WithEvents btnBackupDatabase As System.Windows.Forms.Button
     Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents cbxJuevenile As clsCheckbox
     Friend WithEvents txtTagNumber As clsTextbox
     Friend WithEvents clsDateTimeRegistered As clsDateTimePicker
     Friend WithEvents clsCurrentDateTime As clsDateTimePicker
@@ -763,4 +858,10 @@ Partial Class frmMain
     Friend WithEvents txtYCoord As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents btnNewTrapper As System.Windows.Forms.Button
+    Friend WithEvents cbxJuevenile As FurRegistration.clsCheckbox
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel4 As System.Windows.Forms.TableLayoutPanel
 End Class

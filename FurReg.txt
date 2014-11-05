@@ -38,3 +38,25 @@ Did NOT Update the Following Layers:
 
 
 
+Data Source Update Process Started: 11/5/2014 9:07:34 AM
+Updated the Following Layers to V:\gdrs
+	PLS Township center point
+	PLS Township polygon
+
+Did NOT Update the Following Layers: 
+	Fur_Reg
+	2010 FSA Color Aerial Photography - Cached Web Service
+
+
+
+Data Source Update Process Started: 11/5/2014 9:13:47 AM
+Updated the Following Layers to V:\gdrs
+	PLS Township center point
+	PLS Township polygon
+
+Did NOT Update the Following Layers: 
+	Fur_Reg
+	2010 FSA Color Aerial Photography - Cached Web Service
+
+
+

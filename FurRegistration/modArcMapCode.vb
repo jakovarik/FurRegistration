@@ -35,7 +35,6 @@ Module modArcMapCode
 #Region "TABLE FUNCTIONS"
     Public Function Table_GetFromPath(ByVal aPath As String, ByVal aName As String) As ITable
         'pass path including gdb name and name of table and function passes table object
-        MessageBox.Show(aPath & "," & aName)
         Dim factoryType As Type = Type.GetTypeFromProgID("esriDataSourcesGDB.FileGDBWorkspaceFactory")
 
         Dim wf As IWorkspaceFactory
@@ -298,6 +297,56 @@ Module modArcMapCode
         End Try
         Return Nothing
     End Function
+
+    Public Sub Database_Backup()
+        Dim paths As New ArrayList()
+        Dim path As String = ""
+        Dim note As String = "Saved backup copy of data to:" & vbNewLine
+        Dim aDate As String = Format(DateTime.Now, "_yyyyMMdd_HHmmss")
+
+        If Directory.Exists(path) Then
+            Dim nPath As String = path
+            If path.ToLower().EndsWith(".gdb") Then
+                nPath = path.Substring(0, path.LastIndexOf(".")) & aDate & ".gdb"
+            End If
+
+
+            CopyDirectory(path, nPath)
+            note = note & vbTab & nPath & vbNewLine
+
+        End If
+
+    End Sub
+    Private Sub CopyDirectory(ByVal sOriginal As String, ByVal sDestination As String)
+        Dim oFiles() As IO.FileInfo
+        Dim oFile As IO.FileInfo
+        Dim oDirectory As New IO.DirectoryInfo(sOriginal)
+        IO.Directory.CreateDirectory(sDestination)
+
+        Try
+            oFiles = oDirectory.GetFiles()
+        Catch ex As UnauthorizedAccessException
+            Exit Sub
+        End Try
+
+        Try
+            For Each oFile In oFiles
+                'Ignore LOCK files because they only cause problems
+                If oFile.FullName.ToLower().EndsWith("lock") Then Continue For
+                If IO.File.Exists(sDestination & "\" & oFile.FullName.Substring(sOriginal.Length)) Then Continue For
+                IO.File.Copy(oFile.FullName, sDestination & "\" & oFile.FullName.Substring(sOriginal.Length))
+            Next
+        Catch ex As Exception
+        End Try
+
+        Try
+            For Each oEntry As IO.DirectoryInfo In oDirectory.GetDirectories
+                CopyDirectory(oEntry.FullName, sDestination & "\" & oEntry.FullName.Substring(sOriginal.Length))
+            Next
+        Catch ex As Exception
+        End Try
+    End Sub
+
 #End Region
 
 #Region "FORM CODE"
@@ -325,7 +374,7 @@ Module modArcMapCode
         'Dim pID As New UID
 
         Try
-            pFeatureClass = featureclass_Find(m_FeatureClassName)
+            pFeatureClass = FeatureClass_Find(m_FeatureClassName)
 
             If pFeatureClass Is Nothing Then
                 MessageBox.Show("Could not find " & m_FeatureClassName)
@@ -334,7 +383,7 @@ Module modArcMapCode
 
             If m_frmFurBearer Is Nothing Then
                 m_frmFurBearer = New frmMain()
-
+                m_frmFurBearer.Text = "Fur Registration - v" & My.Version & ", " & My.Date
                 'pID.Value = "esriEditor.Editor"
                 'm_Editor = TryCast(My.ArcMap.Application.FindExtensionByCLSID(pID), IEditor)
             Else
@@ -467,7 +516,7 @@ Module modArcMapCode
                 Catch ex As Exception
                     MessageBox.Show("field name: " & pFeature.Fields.Field(va(0)).Name & ", Value: " & va(1))
                 End Try
-              
+
             Next
             'MessageBox.Show("made it through populating feature")
 
