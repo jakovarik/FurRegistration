@@ -16,6 +16,7 @@ Imports ESRI.ArcGIS.Framework
 
 Module modArcMapCode
     Public m_frmFurBearer As frmMain = Nothing
+    Public m_frmNameLookup As frmNameLookup = Nothing
     Public m_Editor As IEditor = Nothing
     Public m_TempPath As String = "c:\temp"  'location of log file
     Public m_FieldValueArray As ArrayList
@@ -156,7 +157,7 @@ Module modArcMapCode
                             If (dsName.Contains(".")) Then dsName = dsName.Substring(dsName.LastIndexOf(".") + 1)
                             If (dsName.ToUpper() = aName.ToUpper()) Then
                                 'Found the layer so exit out of loop
-                                MessageBox.Show(dsName)
+                                'MessageBox.Show(dsName)
                                 Dim pFeatureLayer As IFeatureLayer = retLayer
 
                                 Return pFeatureLayer.FeatureClass
@@ -200,6 +201,41 @@ Module modArcMapCode
             featureWorkspace = Nothing
         End Try
     End Function
+    Public Sub Generate_Juvenile()
+
+        Dim pTable As ITable
+        Dim pCursor As ICursor = Nothing
+        Dim pRow As IRow = Nothing
+        Dim pQueryFilter As New QueryFilter()
+
+        Try
+
+
+            'GET TABLE
+            pTable = Table_GetFromPath(m_FeatureClassPath, "custtrapping")
+            If pTable Is Nothing Then Exit Sub
+
+            'QUERY TABLE
+            pQueryFilter = New QueryFilter
+            'QUERY MAX CUST_id RECORD
+            pQueryFilter.WhereClause = """CUSTOMER_I"" = (SELECT MAX(""CUSTOMER_I"") FROM custtrapping)"
+
+            pCursor = pTable.Search(pQueryFilter, True)
+            pRow = pCursor.NextRow()
+
+            'GET LARGEST CUST_ID
+            Dim pRecord As Integer
+            pRecord = pRow.Value(pRow.Fields.FindField("CUSTOMER_I"))
+            pRecord += 1
+            m_frmFurBearer.cboMNDNRNumber.Text = pRecord
+
+        Catch ex As Exception
+            Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
+
+        End Try
+
+    End Sub
+
 
     Public Function Directory_Copy(SourcePath As String, DestinationPath As String) As Boolean
         'source path = main gdb
@@ -301,21 +337,30 @@ Module modArcMapCode
 
     Public Sub Database_Backup()
         Dim paths As New ArrayList()
-        Dim path As String = ""
+        Dim path As String = m_FeatureClassPath
         Dim note As String = "Saved backup copy of data to:" & vbNewLine
         Dim aDate As String = Format(DateTime.Now, "_yyyyMMdd_HHmmss")
 
-        If Directory.Exists(path) Then
-            Dim nPath As String = path
-            If path.ToLower().EndsWith(".gdb") Then
-                nPath = path.Substring(0, path.LastIndexOf(".")) & aDate & ".gdb"
+        Try
+            If Directory.Exists(path) Then
+                Dim nPath As String = path
+                If path.ToLower().EndsWith(".gdb") Then
+                    nPath = path.Substring(0, path.LastIndexOf(".")) & aDate & ".gdb"
+                End If
+
+
+                CopyDirectory(path, nPath)
+                note = note & vbTab & nPath & vbNewLine
+                MessageBox.Show("Database successfully backed up!")
+
             End If
 
+        Catch ex As Exception
+            Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
+        End Try
 
-            CopyDirectory(path, nPath)
-            note = note & vbTab & nPath & vbNewLine
 
-        End If
+
 
     End Sub
     Private Sub CopyDirectory(ByVal sOriginal As String, ByVal sDestination As String)
@@ -345,7 +390,9 @@ Module modArcMapCode
                 CopyDirectory(oEntry.FullName, sDestination & "\" & oEntry.FullName.Substring(sOriginal.Length))
             Next
         Catch ex As Exception
+            Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
         End Try
+
     End Sub
 
 #End Region
@@ -399,6 +446,17 @@ Module modArcMapCode
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
         Finally
 
+        End Try
+
+        'COUNT TABLE ROWS AND DISPLAY IN TOTAL RECORDS LABEL
+        Try
+            Dim ptable As ITable
+            ptable = Table_GetFromPath(m_FeatureClassPath, "custtrapping")
+            If ptable Is Nothing Then Exit Sub
+
+            m_frmFurBearer.lblTotalRecords.Text = "Total Records:" & ptable.RowCount(Nothing).ToString("N0")
+        Catch ex As Exception
+            Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
         End Try
     End Sub
 
@@ -462,6 +520,12 @@ Module modArcMapCode
         Dim aName As String = ""
         Dim aStatus As String = ""
 
+
+        Dim pTable As ITable
+        Dim pCursor As ICursor = Nothing
+        Dim pRow As IRow = Nothing
+        Dim pQueryFilter As New QueryFilter()
+
         Try
             '**************  CREATE SHAPE.  If it is invalid then error to user!!! ****************
             Dim pPoint As IPoint
@@ -522,10 +586,50 @@ Module modArcMapCode
             'MessageBox.Show("made it through populating feature")
 
             pFeature.Store()
+
+            '**********************************************************************
+            'GET TABLE
+            pTable = Table_GetFromPath(m_FeatureClassPath, "custtrapping")
+            If pTable Is Nothing Then Exit Sub
+
+            'QUERY TABLE
+            pQueryFilter = New QueryFilter
+            'QUERY MAX CUST_id RECORD
+            'pQueryFilter.WhereClause = "CUSTOMER_I" = (SELECT MAX("CUSTOMER_I") FROM custtrapping)"
+
+            pCursor = pTable.Search(pQueryFilter, True)
+            pRow = pCursor.NextRow()
+
+            'IF RECORD DOESN'T EXIST, CREATE RECORD
+            If pRow Is Nothing Then
+                pRow = pTable.CreateRow()
+            End If
+
+            m_FieldValueArray = New ArrayList()
+            For Each ctl In m_frmFurBearer.Controls
+                Form_SetFieldValueArray(ctl, pTable)
+            Next
+
+
+            For Each va In m_FieldValueArray
+                If va(1) Is Nothing Then Continue For
+                Try
+                    pRow.Value(va(0)) = va(1)
+                    'MessageBox.Show("Field Index: " & va(0) & ", Value: " & va(1))
+                Catch ex As Exception
+                    MessageBox.Show("field name: " & pRow.Fields.Field(va(0)).Name & ", Value: " & va(1))
+                End Try
+
+            Next
+
+            pRow.Store()
+
+            '************************************************************************
             workspaceEdit.StopEditing(True)
             My.ArcMap.Document.ActiveView.Refresh()
             'm_Editor.StopOperation("Submitted Edits to Features in " & pFeatureClass.AliasName)
             'MessageBox.Show("7")
+
         Catch ex As Exception
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
             If Not workspaceEdit Is Nothing Then
@@ -538,11 +642,24 @@ Module modArcMapCode
             pFeatureClass = Nothing
         End Try
         'MessageBox.Show("9")
+
+        'COUNT TABLE ROWS AND DISPLAY IN TOTAL RECORDS LABEL
+        Try
+            pTable = Table_GetFromPath(m_FeatureClassPath, "custtrapping")
+            If pTable Is Nothing Then Exit Sub
+
+            m_frmFurBearer.lblTotalRecords.Text = "Total Records:" & pTable.RowCount(Nothing).ToString("N0")
+        Catch ex As Exception
+            Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
+        End Try
+
     End Sub
+
     Public Sub Form_SetFieldValueArray(ByVal ctl As Control, ByVal pFeatureClass As IFeatureClass)
         'Pulls all the values out of controls and associates them with the proper field index from the feature class.
         'Returns a list of fieldIndex/Value pairs.
         Dim fIDX As Integer
+
         Try
             If ctl Is Nothing Then Exit Sub
             If ctl.HasChildren Then
@@ -587,6 +704,7 @@ Module modArcMapCode
         Finally
 
         End Try
+
     End Sub
 #End Region
 #Region "ERROR HANDLING"

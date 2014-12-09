@@ -93,6 +93,10 @@ AfterLoop:
             'Query the Table (Returns all records unless you specify a WhereClause)
             pCursor = pTable.Search(pQueryFilter, True)
             pRow = pCursor.NextRow()
+            'if pRow = Nothing 
+            'then pRow = pTable.InsertFeature/NewFeature
+            'code to populate pRow (from form Submit - drop down selections)
+            'pRow.Store
             m_AllCodedDomains.Clear()
 
             'For each Row in the lookup table

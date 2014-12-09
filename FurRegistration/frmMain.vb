@@ -19,6 +19,7 @@ Public Class frmMain
 
         'cboMNDNRNumber.Text = String.Empty 'get the list of MNDNR ID's. Loop through list, get highest value, add 1.
 
+        cboMNDNRNumber.Text = String.Empty
         cboStation.Text = String.Empty
         cboSpecies.Text = String.Empty
         cboSex.Text = String.Empty
@@ -201,12 +202,16 @@ Public Class frmMain
     End Sub
 
    
-    Private Sub txtTagNumber_TextChanged(sender As Object, e As EventArgs) Handles txtTagNumber.TextChanged
-
-    End Sub
 
     Private Sub cbxJuevenile_CheckedChanged(sender As Object, e As EventArgs)
         'put code here to genereate new number with 9999 prefix
+        txtFirstName.Clear()
+        txtLastName.Clear()
+        txtAddress.Clear()
+        txtCity.Clear()
+        txtAddress.Clear()
+        txtState.Clear()
+
 
     End Sub
 
@@ -216,7 +221,27 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub txtMNDNRNumber_TextChanged(sender As Object, e As EventArgs) Handles txtMNDNRNumber.TextChanged
+
+
+    Private Sub btnJuvenille_Click(sender As Object, e As EventArgs) Handles btnJuvenille.Click
+        Generate_Juvenile()
+
+    End Sub
+
+
+    Private Sub txtMNDNRNumber_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+    Private Sub txtTagNumber_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        m_frmNameLookup = New frmNameLookup
+        If m_frmNameLookup.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            'populate form with selected record from frmNameLookup window.
+
+        End If
 
     End Sub
 End Class
