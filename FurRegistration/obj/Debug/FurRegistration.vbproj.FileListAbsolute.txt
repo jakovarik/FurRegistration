@@ -18,3 +18,13 @@ D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurR
 D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.xml
 D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.pdb
 D:\Users\jabrost\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.esriAddIn
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.dll
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.pdb
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.xml
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.frmMain.resources
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.Resources.resources
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.vbproj.GenerateResource.Cache
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.dll
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.xml
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.pdb
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.esriAddIn

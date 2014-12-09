@@ -54,13 +54,9 @@ Partial Class frmMain
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnNewTrapper = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnJuvenille = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.cboMNDNRNumber = New FurRegistration.clsCombobox()
+        Me.btnNewTrapper = New System.Windows.Forms.Button()
+        Me.btnJuvenille = New System.Windows.Forms.Button()
         Me.clsDateTimeRegistered = New FurRegistration.clsDateTimePicker(Me.components)
         Me.txtTagNumber = New FurRegistration.clsTextbox(Me.components)
         Me.clsCurrentDateTime = New FurRegistration.clsDateTimePicker(Me.components)
@@ -70,11 +66,7 @@ Partial Class frmMain
         Me.cboTakeMethod = New FurRegistration.clsCombobox()
         Me.cboSpecies = New FurRegistration.clsCombobox()
         Me.cboSex = New FurRegistration.clsCombobox()
-        Me.txtCountyName = New FurRegistration.clsTextbox(Me.components)
-        Me.txtCountyNumber = New FurRegistration.clsTextbox(Me.components)
-        Me.txtRangeDirection = New FurRegistration.clsTextbox(Me.components)
-        Me.txtRange = New FurRegistration.clsTextbox(Me.components)
-        Me.txtTownship = New FurRegistration.clsTextbox(Me.components)
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtZip = New FurRegistration.clsTextbox(Me.components)
         Me.txtState = New FurRegistration.clsTextbox(Me.components)
         Me.txtCity = New FurRegistration.clsTextbox(Me.components)
@@ -82,6 +74,14 @@ Partial Class frmMain
         Me.txtLastName = New FurRegistration.clsTextbox(Me.components)
         Me.txtFirstName = New FurRegistration.clsTextbox(Me.components)
         Me.txtMNDNRNumber = New FurRegistration.clsTextbox(Me.components)
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.txtCountyName = New FurRegistration.clsTextbox(Me.components)
+        Me.txtCountyNumber = New FurRegistration.clsTextbox(Me.components)
+        Me.txtRangeDirection = New FurRegistration.clsTextbox(Me.components)
+        Me.txtRange = New FurRegistration.clsTextbox(Me.components)
+        Me.txtTownship = New FurRegistration.clsTextbox(Me.components)
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -440,132 +440,6 @@ Partial Class frmMain
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(346, 319)
         Me.TableLayoutPanel1.TabIndex = 34
         '
-        'btnNewTrapper
-        '
-        Me.btnNewTrapper.ForeColor = System.Drawing.Color.Red
-        Me.btnNewTrapper.Location = New System.Drawing.Point(8, 275)
-        Me.btnNewTrapper.Name = "btnNewTrapper"
-        Me.btnNewTrapper.Size = New System.Drawing.Size(75, 36)
-        Me.btnNewTrapper.TabIndex = 19
-        Me.btnNewTrapper.Text = "New Trapper"
-        Me.btnNewTrapper.UseVisualStyleBackColor = True
-        Me.btnNewTrapper.Visible = False
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel2.Controls.Add(Me.txtZip, 1, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label23, 0, 5)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtState, 1, 4)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label17, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtCity, 1, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label22, 0, 4)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtAddress, 1, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label11, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtLastName, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label12, 0, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtFirstName, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label14, 0, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.txtMNDNRNumber, 1, 7)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 1, 6)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 394)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 8
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(392, 226)
-        Me.TableLayoutPanel2.TabIndex = 35
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TableLayoutPanel3.ColumnCount = 2
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel3.Controls.Add(Me.txtCountyName, 1, 4)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label18, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label16, 0, 5)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label24, 0, 6)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtCountyNumber, 1, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtYCoord, 1, 6)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label13, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtRangeDirection, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label15, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtXCoord, 1, 5)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtRange, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label19, 0, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtTownship, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label20, 0, 4)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(436, 33)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 7
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(323, 272)
-        Me.TableLayoutPanel3.TabIndex = 36
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TableLayoutPanel4.ColumnCount = 1
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.btnEnter, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.btnClose, 0, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.btnBackupDatabase, 0, 2)
-        Me.TableLayoutPanel4.Controls.Add(Me.Label21, 0, 3)
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(484, 372)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 4
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(226, 270)
-        Me.TableLayoutPanel4.TabIndex = 37
-        '
-        'btnJuvenille
-        '
-        Me.btnJuvenille.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnJuvenille.ForeColor = System.Drawing.Color.Red
-        Me.btnJuvenille.Location = New System.Drawing.Point(200, 275)
-        Me.btnJuvenille.Name = "btnJuvenille"
-        Me.btnJuvenille.Size = New System.Drawing.Size(75, 36)
-        Me.btnJuvenille.TabIndex = 38
-        Me.btnJuvenille.Text = "Juvenille Trapper"
-        Me.btnJuvenille.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel5
-        '
-        Me.TableLayoutPanel5.ColumnCount = 2
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel4, 1, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel1, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel3, 1, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel2, 0, 1)
-        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 2
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(797, 676)
-        Me.TableLayoutPanel5.TabIndex = 39
-        '
         'cboMNDNRNumber
         '
         Me.cboMNDNRNumber.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -577,6 +451,28 @@ Partial Class frmMain
         Me.cboMNDNRNumber.Size = New System.Drawing.Size(189, 21)
         Me.cboMNDNRNumber.TabIndex = 1
         Me.cboMNDNRNumber.Tag = "custid"
+        '
+        'btnNewTrapper
+        '
+        Me.btnNewTrapper.ForeColor = System.Drawing.Color.Red
+        Me.btnNewTrapper.Location = New System.Drawing.Point(8, 275)
+        Me.btnNewTrapper.Name = "btnNewTrapper"
+        Me.btnNewTrapper.Size = New System.Drawing.Size(75, 36)
+        Me.btnNewTrapper.TabIndex = 19
+        Me.btnNewTrapper.Text = "New Trapper"
+        Me.btnNewTrapper.UseVisualStyleBackColor = True
+        Me.btnNewTrapper.Visible = False
+        '
+        'btnJuvenille
+        '
+        Me.btnJuvenille.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnJuvenille.ForeColor = System.Drawing.Color.Red
+        Me.btnJuvenille.Location = New System.Drawing.Point(200, 275)
+        Me.btnJuvenille.Name = "btnJuvenille"
+        Me.btnJuvenille.Size = New System.Drawing.Size(75, 36)
+        Me.btnJuvenille.TabIndex = 38
+        Me.btnJuvenille.Text = "Juvenille Trapper"
+        Me.btnJuvenille.UseVisualStyleBackColor = True
         '
         'clsDateTimeRegistered
         '
@@ -676,63 +572,39 @@ Partial Class frmMain
         Me.cboSex.Size = New System.Drawing.Size(189, 21)
         Me.cboSex.TabIndex = 4
         '
-        'txtCountyName
+        'TableLayoutPanel2
         '
-        Me.txtCountyName.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtCountyName.Location = New System.Drawing.Point(95, 197)
-        Me.txtCountyName.Name = "txtCountyName"
-        Me.txtCountyName.npc_DefaultValue = Nothing
-        Me.txtCountyName.npc_FieldName = "County_Name"
-        Me.txtCountyName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtCountyName.Size = New System.Drawing.Size(268, 20)
-        Me.txtCountyName.TabIndex = 15
-        '
-        'txtCountyNumber
-        '
-        Me.txtCountyNumber.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtCountyNumber.Location = New System.Drawing.Point(95, 151)
-        Me.txtCountyNumber.Name = "txtCountyNumber"
-        Me.txtCountyNumber.npc_DefaultValue = Nothing
-        Me.txtCountyNumber.npc_FieldName = "County_Number"
-        Me.txtCountyNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtCountyNumber.Size = New System.Drawing.Size(268, 20)
-        Me.txtCountyNumber.TabIndex = 14
-        '
-        'txtRangeDirection
-        '
-        Me.txtRangeDirection.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtRangeDirection.Location = New System.Drawing.Point(95, 105)
-        Me.txtRangeDirection.MaxLength = 1
-        Me.txtRangeDirection.Name = "txtRangeDirection"
-        Me.txtRangeDirection.npc_DefaultValue = Nothing
-        Me.txtRangeDirection.npc_FieldName = "Range_Direction"
-        Me.txtRangeDirection.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtRangeDirection.Size = New System.Drawing.Size(268, 20)
-        Me.txtRangeDirection.TabIndex = 13
-        '
-        'txtRange
-        '
-        Me.txtRange.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtRange.Location = New System.Drawing.Point(95, 59)
-        Me.txtRange.MaxLength = 2
-        Me.txtRange.Name = "txtRange"
-        Me.txtRange.npc_DefaultValue = Nothing
-        Me.txtRange.npc_FieldName = "Range"
-        Me.txtRange.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtRange.Size = New System.Drawing.Size(268, 20)
-        Me.txtRange.TabIndex = 12
-        '
-        'txtTownship
-        '
-        Me.txtTownship.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtTownship.Location = New System.Drawing.Point(95, 13)
-        Me.txtTownship.MaxLength = 3
-        Me.txtTownship.Name = "txtTownship"
-        Me.txtTownship.npc_DefaultValue = Nothing
-        Me.txtTownship.npc_FieldName = "Township"
-        Me.txtTownship.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
-        Me.txtTownship.Size = New System.Drawing.Size(268, 20)
-        Me.txtTownship.TabIndex = 11
+        Me.TableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel2.Controls.Add(Me.txtZip, 1, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label23, 0, 5)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtState, 1, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label17, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtCity, 1, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label22, 0, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtAddress, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label11, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtLastName, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label12, 0, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtFirstName, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label14, 0, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.txtMNDNRNumber, 1, 7)
+        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 1, 6)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 394)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 8
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(392, 226)
+        Me.TableLayoutPanel2.TabIndex = 35
         '
         'txtZip
         '
@@ -812,6 +684,134 @@ Partial Class frmMain
         Me.txtMNDNRNumber.Size = New System.Drawing.Size(268, 20)
         Me.txtMNDNRNumber.TabIndex = 30
         Me.txtMNDNRNumber.Visible = False
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TableLayoutPanel3.ColumnCount = 2
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel3.Controls.Add(Me.txtCountyName, 1, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label18, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label16, 0, 5)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label24, 0, 6)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtCountyNumber, 1, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtYCoord, 1, 6)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label13, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtRangeDirection, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label15, 0, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtXCoord, 1, 5)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtRange, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label19, 0, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtTownship, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label20, 0, 4)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(436, 33)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 7
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(323, 272)
+        Me.TableLayoutPanel3.TabIndex = 36
+        '
+        'txtCountyName
+        '
+        Me.txtCountyName.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtCountyName.Location = New System.Drawing.Point(95, 197)
+        Me.txtCountyName.Name = "txtCountyName"
+        Me.txtCountyName.npc_DefaultValue = Nothing
+        Me.txtCountyName.npc_FieldName = "County_Name"
+        Me.txtCountyName.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtCountyName.Size = New System.Drawing.Size(268, 20)
+        Me.txtCountyName.TabIndex = 15
+        '
+        'txtCountyNumber
+        '
+        Me.txtCountyNumber.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtCountyNumber.Location = New System.Drawing.Point(95, 151)
+        Me.txtCountyNumber.Name = "txtCountyNumber"
+        Me.txtCountyNumber.npc_DefaultValue = Nothing
+        Me.txtCountyNumber.npc_FieldName = "County_Number"
+        Me.txtCountyNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtCountyNumber.Size = New System.Drawing.Size(268, 20)
+        Me.txtCountyNumber.TabIndex = 14
+        '
+        'txtRangeDirection
+        '
+        Me.txtRangeDirection.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtRangeDirection.Location = New System.Drawing.Point(95, 105)
+        Me.txtRangeDirection.MaxLength = 1
+        Me.txtRangeDirection.Name = "txtRangeDirection"
+        Me.txtRangeDirection.npc_DefaultValue = Nothing
+        Me.txtRangeDirection.npc_FieldName = "Range_Direction"
+        Me.txtRangeDirection.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtRangeDirection.Size = New System.Drawing.Size(268, 20)
+        Me.txtRangeDirection.TabIndex = 13
+        '
+        'txtRange
+        '
+        Me.txtRange.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtRange.Location = New System.Drawing.Point(95, 59)
+        Me.txtRange.MaxLength = 2
+        Me.txtRange.Name = "txtRange"
+        Me.txtRange.npc_DefaultValue = Nothing
+        Me.txtRange.npc_FieldName = "Range"
+        Me.txtRange.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtRange.Size = New System.Drawing.Size(268, 20)
+        Me.txtRange.TabIndex = 12
+        '
+        'txtTownship
+        '
+        Me.txtTownship.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtTownship.Location = New System.Drawing.Point(95, 13)
+        Me.txtTownship.MaxLength = 3
+        Me.txtTownship.Name = "txtTownship"
+        Me.txtTownship.npc_DefaultValue = Nothing
+        Me.txtTownship.npc_FieldName = "Township"
+        Me.txtTownship.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtTownship.Size = New System.Drawing.Size(268, 20)
+        Me.txtTownship.TabIndex = 11
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TableLayoutPanel4.ColumnCount = 1
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.btnEnter, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.btnClose, 0, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.btnBackupDatabase, 0, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.Label21, 0, 3)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(484, 372)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 4
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(226, 270)
+        Me.TableLayoutPanel4.TabIndex = 37
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 2
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel4, 1, 1)
+        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel1, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel3, 1, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel2, 0, 1)
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 2
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(797, 676)
+        Me.TableLayoutPanel5.TabIndex = 39
         '
         'frmMain
         '

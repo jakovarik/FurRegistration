@@ -124,6 +124,7 @@ Module modArcMapCode
         End Try
         Return arrList
     End Function
+
 #End Region
 
 #Region "LAYER/FEATURE CLASS CODE"
@@ -277,7 +278,7 @@ Module modArcMapCode
         Dim pFeatureCursor As IFeatureCursor
 
         Try
-            pFeatureClass = featureclass_getFromPath(aPath, aName)
+            pFeatureClass = FeatureClass_GetFromPath(aPath, aName)
             If pFeatureClass Is Nothing Then Return Nothing
 
             pSpatialFilter = New SpatialFilter()
