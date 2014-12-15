@@ -213,7 +213,7 @@ Partial Class frmMain
         'btnSearch
         '
         Me.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btnSearch.ForeColor = System.Drawing.Color.Red
+        Me.btnSearch.ForeColor = System.Drawing.Color.Black
         Me.btnSearch.Location = New System.Drawing.Point(70, 162)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(125, 28)
@@ -494,7 +494,7 @@ Partial Class frmMain
         Me.txtTagNumber.Name = "txtTagNumber"
         Me.txtTagNumber.npc_DefaultValue = Nothing
         Me.txtTagNumber.npc_FieldName = "Tag_Number"
-        Me.txtTagNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeSmallInteger
+        Me.txtTagNumber.npc_FieldType = ESRI.ArcGIS.Geodatabase.esriFieldType.esriFieldTypeInteger
         Me.txtTagNumber.Size = New System.Drawing.Size(189, 20)
         Me.txtTagNumber.TabIndex = 5
         '

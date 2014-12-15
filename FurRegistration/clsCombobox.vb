@@ -113,6 +113,7 @@ AfterLoop:
                     End If
                 Next
 
+
                 'Add the description/value to the list of domains that will be assigned to the combobox
                 m_AllCodedDomains.Add(New ValueDescriptionPair(valueArray, aDesc))
                 col.Add(aDesc)
@@ -177,14 +178,18 @@ endofwhile:
     End Property
 #End Region
 
-    Public Sub Set_Value(ByVal aVal As Object)
+    Public Sub Set_Value(ByVal aVal As Object, Optional IsText As Boolean = False)
         Try
             If IsDBNull(aVal) Then
                 Me.SelectedValue = ""
                 Exit Sub
             End If
 
-            Me.SelectedValue = aVal
+            If IsText Then
+                Me.SelectedText = aVal
+            Else
+                Me.SelectedValue = aVal
+            End If
 
         Catch ex As Exception
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name & " - " & Me.Name)

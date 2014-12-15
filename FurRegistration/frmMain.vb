@@ -64,7 +64,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub GenerateTownshipCentroid()
+    Public Sub GenerateTownshipCentroid()
         'x1)	Get Township Feature Class
         'x2)	Perform Attribute Query on Township FC for TWP/RNG/DIR
         'x3)	Get Polygon of Matching Township (does township have county info?  If not you’ll need to query for the county later).
@@ -198,7 +198,6 @@ Public Class frmMain
 
     Private Sub txtRangeDirection_Leave(sender As Object, e As EventArgs) Handles txtRangeDirection.Leave
         GenerateTownshipCentroid()
-
     End Sub
 
    

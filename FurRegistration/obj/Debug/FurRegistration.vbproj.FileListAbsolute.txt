@@ -27,5 +27,5 @@ D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\Fur
 D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.dll
 D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.xml
 D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.pdb
-D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.esriAddIn
+D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.frmNameLookup.resources
 D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.esriAddIn

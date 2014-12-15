@@ -95,7 +95,7 @@ Module modArcMapCode
         Return val
     End Function
     Public Function Table_GetLookups(ByVal aPath As String, ByVal aTable As String, ByVal aQuery As String, ByVal outFieldValue As String) As ArrayList
-        'Queries a table and returns one value from the out field that satisfy the query
+        'Queries a table and returns one value from the out field that satisfies the query
         Dim val As Object = ""
         Dim pTable As ITable
         Dim pRow As IRow
@@ -451,7 +451,7 @@ Module modArcMapCode
         'COUNT TABLE ROWS AND DISPLAY IN TOTAL RECORDS LABEL
         Try
             Dim ptable As ITable
-            ptable = Table_GetFromPath(m_FeatureClassPath, "custtrapping")
+            ptable = Table_GetFromPath(m_FeatureClassPath, "Fur_Reg")
             If ptable Is Nothing Then Exit Sub
 
             m_frmFurBearer.lblTotalRecords.Text = "Total Records:" & ptable.RowCount(Nothing).ToString("N0")
@@ -499,7 +499,7 @@ Module modArcMapCode
                 If fieldIndex = -1 Then Exit Sub
                 pField = pTable.Fields.Field(fieldIndex)
                 CType(ctl, clsTextbox).npc_FieldType = pField.Type
-                CType(ctl, clsTextbox).MaxLength = pField.Length
+                'CType(ctl, clsTextbox).MaxLength = pField.Length
             ElseIf TypeOf ctl Is clsDateTimePicker Then
 
             End If
@@ -528,6 +528,9 @@ Module modArcMapCode
 
         Try
             '**************  CREATE SHAPE.  If it is invalid then error to user!!! ****************
+
+            m_frmFurBearer.GenerateTownshipCentroid()
+
             Dim pPoint As IPoint
             pPoint = New Point()
             pPoint.X = m_xCoord
@@ -539,6 +542,7 @@ Module modArcMapCode
                 MessageBox.Show("Error creating Shape")
                 Exit Sub
             End If
+
             pFeatureClass = FeatureClass_Find(m_FeatureClassName)
             If pFeatureClass Is Nothing Then
                 MessageBox.Show("Feature class is nothing")
@@ -548,57 +552,49 @@ Module modArcMapCode
             For Each ctl In m_frmFurBearer.Controls
                 Form_SetFieldValueArray(ctl, pFeatureClass)
             Next
+
             'Check to see if you are in an operation.
             Dim pDataset As IDataset = pFeatureClass
-            'm_Editor.EditWorkspace = pDataset.Workspace
-            'm_Editor.Workspace = pDataset.Workspace
-            'workspaceEdit = CType(m_Editor.EditWorkspace, IWorkspaceEdit2)
-            '?????? 
             workspaceEdit = pDataset.Workspace
+
             If workspaceEdit Is Nothing Then
                 MessageBox.Show("workspace edit is nothing")
             End If
+
             If workspaceEdit.IsBeingEdited = False Then
                 workspaceEdit.StartEditing(False)
             End If
 
-            'If (Not workspaceEdit.IsInEditOperation) Then
-            '    ' Close the first operation.
-            '    m_Editor.StopOperation("edit")
-            'End If
-            'm_Editor.StartOperation()
-
-
             pFeature = pFeatureClass.CreateFeature()
             pFeature.Shape = pGeometry
-            'MessageBox.Show("6")
 
             For Each va In m_FieldValueArray
                 If va(1) Is Nothing Then Continue For
                 Try
                     pFeature.Value(va(0)) = va(1)
-                    'MessageBox.Show("Field Index: " & va(0) & ", Value: " & va(1))
+
                 Catch ex As Exception
                     MessageBox.Show("field name: " & pFeature.Fields.Field(va(0)).Name & ", Value: " & va(1))
                 End Try
 
             Next
-            'MessageBox.Show("made it through populating feature")
 
             pFeature.Store()
 
             '**********************************************************************
+            'if new record is entered (new trapper, juvenille) create new record & save in table and FC
             'GET TABLE
             pTable = Table_GetFromPath(m_FeatureClassPath, "custtrapping")
             If pTable Is Nothing Then Exit Sub
 
             'QUERY TABLE
             pQueryFilter = New QueryFilter
-            'QUERY MAX CUST_id RECORD
-            'pQueryFilter.WhereClause = "CUSTOMER_I" = (SELECT MAX("CUSTOMER_I") FROM custtrapping)"
+            pQueryFilter.WhereClause = """CUSTOMER_I"" = " & m_frmFurBearer.cboMNDNRNumber.Text
 
-            pCursor = pTable.Search(pQueryFilter, True)
+            pCursor = pTable.Search(pQueryFilter, False)
             pRow = pCursor.NextRow()
+
+
 
             'IF RECORD DOESN'T EXIST, CREATE RECORD
             If pRow Is Nothing Then
@@ -619,7 +615,6 @@ Module modArcMapCode
                 Catch ex As Exception
                     MessageBox.Show("field name: " & pRow.Fields.Field(va(0)).Name & ", Value: " & va(1))
                 End Try
-
             Next
 
             pRow.Store()
@@ -645,7 +640,7 @@ Module modArcMapCode
 
         'COUNT TABLE ROWS AND DISPLAY IN TOTAL RECORDS LABEL
         Try
-            pTable = Table_GetFromPath(m_FeatureClassPath, "custtrapping")
+            pTable = Table_GetFromPath(m_FeatureClassPath, "Fur_Reg")
             If pTable Is Nothing Then Exit Sub
 
             m_frmFurBearer.lblTotalRecords.Text = "Total Records:" & pTable.RowCount(Nothing).ToString("N0")
@@ -655,7 +650,7 @@ Module modArcMapCode
 
     End Sub
 
-    Public Sub Form_SetFieldValueArray(ByVal ctl As Control, ByVal pFeatureClass As IFeatureClass)
+    Public Sub Form_SetFieldValueArray(ByVal ctl As Control, ByVal pFeatureClass As ITable)
         'Pulls all the values out of controls and associates them with the proper field index from the feature class.
         'Returns a list of fieldIndex/Value pairs.
         Dim fIDX As Integer
@@ -868,10 +863,6 @@ Module modArcMapCode
         Private m_Description As String
         Private m_SortOrder As String
         Private m_ToolTip As String
-
-        Public Sub New()
-
-        End Sub
         Public Sub New(ByVal NewValue As Object, ByVal NewDescription As String, Optional ByVal sortOrder As String = "", Optional ByVal toolTip As String = "")
             m_Value = NewValue
             m_Description = NewDescription
