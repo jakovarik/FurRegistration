@@ -37,7 +37,6 @@ Public Class frmMain
 
         txtTownship.Text = ""
         txtRange.Text = ""
-        txtRangeDirection.Text = ""
         txtCountyNumber.Text = ""
         txtCountyName.Text = ""
 
@@ -95,9 +94,33 @@ Public Class frmMain
         'Perform Attribute Query on Township FC for TWP/RNG/DIR
         Dim pQueryFilter As IQueryFilter
         pQueryFilter = New QueryFilter
-        pQueryFilter.WhereClause = "TOWN = " & txtTownship.Text & " AND RANG = " & txtRange.Text & " AND RDIR = " & txtRangeDirection.Text
+        '**********************************
+      
+        'check to see if textRange is numeric
+        'check to see if txtTwp is numeric
+        'if not numeric then exit out
+        'change background of txt box to red if invalid
+        If txtTownship.Text = "" Then
+            MsgBox("You must enter a valid Township")
+            txtRange.BackColor = Drawing.Color.Crimson
+            Exit Sub
+        End If
 
+        If txtRange.Text = "" Then
+            MsgBox("You must enter a valid Range")
+            txtRange.BackColor = Drawing.Color.Crimson
+            Exit Sub
 
+        End If
+
+        If Not txtRange.Text = "" Then
+            txtRange.BackColor = Drawing.Color.White
+        End If
+        If Not txtTownship.Text = "" Then
+            txtTownship.BackColor = Drawing.Color.White
+        End If
+
+        pQueryFilter.WhereClause = "TOWN = " & txtTownship.Text & " AND RANG = " & txtRange.Text '& " AND RDIR = " & txtRangeDirection.Text
 
         'performs search on table using pQueryFilter
         Dim pFeatureCursor As IFeatureCursor
@@ -115,8 +138,6 @@ Public Class frmMain
         Dim CountyNumber As Short
         'get county number from feature
         CountyNumber = pFeature.Value(pFeature.Fields.FindField("COUN"))
-
-        'query the county feature class
 
         'get the geometry of the pFeature
         Dim pGeometry As IGeometry
@@ -194,13 +215,16 @@ Public Class frmMain
         My.ArcMap.Document.ActiveView.Extent = pEnvelope
         My.ArcMap.Document.ActiveView.Refresh()
 
-    End Sub
+        'if TWP/RNG textboxes are red from previous error, clear them
+        'If txtRange.BackColor = Drawing.Color.Crimson Then
+        '    txtRange.BackColor = Drawing.Color.Transparent
+        'End If
+        'If txtTownship.BackColor = Drawing.Color.Crimson Then
+        '    txtTownship.BackColor = Drawing.Color.Transparent
+        'End If
 
-    Private Sub txtRangeDirection_Leave(sender As Object, e As EventArgs) Handles txtRangeDirection.Leave
-        GenerateTownshipCentroid()
-    End Sub
 
-   
+    End Sub
 
     Private Sub cbxJuevenile_CheckedChanged(sender As Object, e As EventArgs)
         'put code here to genereate new number with 9999 prefix
@@ -213,6 +237,10 @@ Public Class frmMain
 
 
     End Sub
+    Private Sub txtRange_Leave(sender As Object, e As EventArgs) Handles txtRange.Leave
+        GenerateTownshipCentroid()
+    End Sub
+
 
     Private Sub btnBackupDatabase_Click(sender As Object, e As EventArgs) Handles btnBackupDatabase.Click
         'put code here to call the Backup Database code
@@ -220,18 +248,15 @@ Public Class frmMain
 
     End Sub
 
-
-
     Private Sub btnJuvenille_Click(sender As Object, e As EventArgs) Handles btnJuvenille.Click
         Generate_Juvenile()
-
-    End Sub
-
-
-    Private Sub txtMNDNRNumber_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub txtTagNumber_TextChanged(sender As Object, e As EventArgs)
+        'txtFirstName.Clear()
+        'txtLastName.Clear()
+        'txtAddress.Clear()
+        'txtCity.Clear()
+        'txtAddress.Clear()
+        'txtState.Clear()
+        'txtZip.Clear()
 
     End Sub
 
@@ -242,5 +267,10 @@ Public Class frmMain
 
         End If
 
+    End Sub
+
+    Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
+        'appCursor.SetCursor(2)
+        Form_Submit()
     End Sub
 End Class

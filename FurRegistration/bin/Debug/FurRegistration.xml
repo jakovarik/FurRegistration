@@ -6,7 +6,20 @@ FurRegistration
 </name>
 </assembly>
 <members>
-<member name="P:FurRegistration.My.ThisAddIn.IDs.FurRegistrationButton">
+<member name="P:FurRegistration.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:FurRegistration.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:FurRegistration.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:FurRegistration.My.ThisAddIn.IDs.FurRegistrationButton">
 	<summary>
 Returns 'MNDNR_FurRegistration_FurRegistrationButton', the id declared for Add-in Button class 'FurRegistrationButton'
 </summary>
@@ -22,19 +35,6 @@ A class for looking up declarative information in the associated configuration x
 	<summary>
  Expose this instance of Add-in class externally
  </summary>
-</member><member name="P:FurRegistration.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:FurRegistration.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:FurRegistration.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
 </member>
 </members>
 </doc>

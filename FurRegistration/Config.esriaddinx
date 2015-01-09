@@ -2,11 +2,11 @@
   <Name>FurRegistration</Name>
   <AddInID>{80a67cde-7cea-48fc-b831-691cfd08d3dd}</AddInID>
   <Description>Fur registratio form</Description>
-  <Version>1.3</Version>
+  <Version>1.4</Version>
   <Image>Images\FurRegistration.png</Image>
   <Author>jakovari</Author>
   <Company>MNDNR</Company>
-  <Date>12/11/2014</Date>
+  <Date>1/7/2015</Date>
   <Targets>
     <Target name="Desktop" version="10.2" />
   </Targets>

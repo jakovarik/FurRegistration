@@ -236,7 +236,6 @@ Module modArcMapCode
 
     End Sub
 
-
     Public Function Directory_Copy(SourcePath As String, DestinationPath As String) As Boolean
         'source path = main gdb
         'dest path = gdb + date timestamp h/m/s
@@ -270,7 +269,6 @@ Module modArcMapCode
         End Try
         Return True
     End Function
-
 
     Public Function FeatureClass_SpatialQueryCount(ByVal aPath As String, ByVal aName As String, ByVal aShape As IGeometry, ByVal SPrEL As esriSpatialRelEnum) As Integer
         Dim c As Integer = 0
@@ -359,9 +357,6 @@ Module modArcMapCode
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
         End Try
 
-
-
-
     End Sub
     Private Sub CopyDirectory(ByVal sOriginal As String, ByVal sDestination As String)
         Dim oFiles() As IO.FileInfo
@@ -403,14 +398,15 @@ Module modArcMapCode
 
         Try
             appCursor.SetCursor(2)
+            'If m_frmFurBearer Is Nothing Then
+            '    m_frmFurBearer = New frmMain()
+            'End If
 
             'Load the Form
             Form_Load()
 
-            If m_frmFurBearer.ShowDialog() = Windows.Forms.DialogResult.OK Then
-                appCursor.SetCursor(2)
-                Form_Submit()
-            End If
+            m_frmFurBearer.Show() '************put code here to keep form on top
+
         Catch ex As Exception
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
         Finally
@@ -432,8 +428,10 @@ Module modArcMapCode
             If m_frmFurBearer Is Nothing Then
                 m_frmFurBearer = New frmMain()
                 m_frmFurBearer.Text = "Fur Registration - v" & My.Version & ", " & My.Date
-                'pID.Value = "esriEditor.Editor"
-                'm_Editor = TryCast(My.ArcMap.Application.FindExtensionByCLSID(pID), IEditor)
+
+            ElseIf m_frmFurBearer.IsDisposed Then
+                m_frmFurBearer = New frmMain()
+                m_frmFurBearer.Text = "Fur Registration - v" & My.Version & ", " & My.Date
             Else
                 Exit Sub
             End If

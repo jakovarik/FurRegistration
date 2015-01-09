@@ -29,3 +29,14 @@ D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\Fur
 D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.pdb
 D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\obj\Debug\FurRegistration.frmNameLookup.resources
 D:\Users\jakovari\Documents\GitHub\FurRegistration\FurRegistration\bin\Debug\FurRegistration.esriAddIn
+D:\dev\FurRegistration-master\FurRegistration\bin\Debug\FurRegistration.dll
+D:\dev\FurRegistration-master\FurRegistration\bin\Debug\FurRegistration.pdb
+D:\dev\FurRegistration-master\FurRegistration\bin\Debug\FurRegistration.xml
+D:\dev\FurRegistration-master\FurRegistration\obj\Debug\FurRegistration.frmMain.resources
+D:\dev\FurRegistration-master\FurRegistration\obj\Debug\FurRegistration.frmNameLookup.resources
+D:\dev\FurRegistration-master\FurRegistration\obj\Debug\FurRegistration.Resources.resources
+D:\dev\FurRegistration-master\FurRegistration\obj\Debug\FurRegistration.vbproj.GenerateResource.Cache
+D:\dev\FurRegistration-master\FurRegistration\obj\Debug\FurRegistration.dll
+D:\dev\FurRegistration-master\FurRegistration\obj\Debug\FurRegistration.xml
+D:\dev\FurRegistration-master\FurRegistration\obj\Debug\FurRegistration.pdb
+D:\dev\FurRegistration-master\FurRegistration\bin\Debug\FurRegistration.esriAddIn
