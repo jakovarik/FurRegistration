@@ -263,7 +263,7 @@ Partial Class frmMain
         '
         Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(12, 196)
+        Me.Label20.Location = New System.Drawing.Point(12, 189)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(74, 13)
         Me.Label20.TabIndex = 13
@@ -273,7 +273,7 @@ Partial Class frmMain
         '
         Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(3, 138)
+        Me.Label19.Location = New System.Drawing.Point(3, 133)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(83, 13)
         Me.Label19.TabIndex = 11
@@ -283,7 +283,7 @@ Partial Class frmMain
         '
         Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(44, 80)
+        Me.Label13.Location = New System.Drawing.Point(44, 77)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(42, 13)
         Me.Label13.TabIndex = 0
@@ -293,7 +293,7 @@ Partial Class frmMain
         '
         Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(30, 22)
+        Me.Label18.Location = New System.Drawing.Point(30, 21)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(56, 13)
         Me.Label18.TabIndex = 7
@@ -302,7 +302,7 @@ Partial Class frmMain
         'btnEnter
         '
         Me.btnEnter.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnEnter.Location = New System.Drawing.Point(28, 13)
+        Me.btnEnter.Location = New System.Drawing.Point(59, 13)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(170, 56)
         Me.btnEnter.TabIndex = 16
@@ -313,7 +313,7 @@ Partial Class frmMain
         '
         Me.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnClose.Location = New System.Drawing.Point(28, 97)
+        Me.btnClose.Location = New System.Drawing.Point(59, 97)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(170, 54)
         Me.btnClose.TabIndex = 17
@@ -324,7 +324,7 @@ Partial Class frmMain
         '
         Me.btnBackupDatabase.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnBackupDatabase.ForeColor = System.Drawing.Color.Black
-        Me.btnBackupDatabase.Location = New System.Drawing.Point(28, 176)
+        Me.btnBackupDatabase.Location = New System.Drawing.Point(59, 176)
         Me.btnBackupDatabase.Name = "btnBackupDatabase"
         Me.btnBackupDatabase.Size = New System.Drawing.Size(170, 52)
         Me.btnBackupDatabase.TabIndex = 18
@@ -333,20 +333,20 @@ Partial Class frmMain
         '
         'lblTotalRecords
         '
-        Me.lblTotalRecords.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblTotalRecords.AutoSize = True
+        Me.lblTotalRecords.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblTotalRecords.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalRecords.ForeColor = System.Drawing.Color.Black
-        Me.lblTotalRecords.Location = New System.Drawing.Point(53, 245)
+        Me.lblTotalRecords.Location = New System.Drawing.Point(3, 239)
         Me.lblTotalRecords.Name = "lblTotalRecords"
-        Me.lblTotalRecords.Size = New System.Drawing.Size(120, 18)
+        Me.lblTotalRecords.Size = New System.Drawing.Size(283, 30)
         Me.lblTotalRecords.TabIndex = 23
         Me.lblTotalRecords.Text = "Total Records:"
         Me.lblTotalRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtXCoord
         '
-        Me.txtXCoord.Location = New System.Drawing.Point(92, 235)
+        Me.txtXCoord.Location = New System.Drawing.Point(92, 227)
         Me.txtXCoord.Name = "txtXCoord"
         Me.txtXCoord.ReadOnly = True
         Me.txtXCoord.Size = New System.Drawing.Size(100, 20)
@@ -355,7 +355,7 @@ Partial Class frmMain
         '
         'txtYCoord
         '
-        Me.txtYCoord.Location = New System.Drawing.Point(92, 255)
+        Me.txtYCoord.Location = New System.Drawing.Point(92, 253)
         Me.txtYCoord.Name = "txtYCoord"
         Me.txtYCoord.ReadOnly = True
         Me.txtYCoord.Size = New System.Drawing.Size(100, 20)
@@ -365,7 +365,7 @@ Partial Class frmMain
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(3, 232)
+        Me.Label16.Location = New System.Drawing.Point(3, 224)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(48, 13)
         Me.Label16.TabIndex = 32
@@ -375,7 +375,7 @@ Partial Class frmMain
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(3, 252)
+        Me.Label24.Location = New System.Drawing.Point(3, 250)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(48, 13)
         Me.Label24.TabIndex = 33
@@ -411,7 +411,7 @@ Partial Class frmMain
         Me.TableLayoutPanel1.Controls.Add(Me.cboSex, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 5)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 10)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(5)
         Me.TableLayoutPanel1.RowCount = 11
@@ -426,7 +426,7 @@ Partial Class frmMain
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(346, 311)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(346, 319)
         Me.TableLayoutPanel1.TabIndex = 34
         '
         'cboMNDNRNumber
@@ -449,6 +449,7 @@ Partial Class frmMain
         Me.btnNewTrapper.Name = "btnNewTrapper"
         Me.btnNewTrapper.Size = New System.Drawing.Size(75, 36)
         Me.btnNewTrapper.TabIndex = 19
+        Me.btnNewTrapper.TabStop = False
         Me.btnNewTrapper.Text = "New Trapper"
         Me.btnNewTrapper.UseVisualStyleBackColor = True
         '
@@ -462,6 +463,7 @@ Partial Class frmMain
         Me.btnJuvenille.TabIndex = 20
         Me.btnJuvenille.Text = "Juvenille Trapper"
         Me.btnJuvenille.UseVisualStyleBackColor = True
+        Me.btnJuvenille.Visible = False
         '
         'clsDateTimeRegistered
         '
@@ -682,24 +684,25 @@ Partial Class frmMain
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TableLayoutPanel3.Controls.Add(Me.txtCountyName, 1, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.Label18, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label16, 0, 4)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label24, 0, 5)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label24, 0, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.txtCountyNumber, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtYCoord, 1, 5)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtYCoord, 1, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.Label13, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.txtXCoord, 1, 4)
         Me.TableLayoutPanel3.Controls.Add(Me.txtRange, 1, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label19, 0, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.txtTownship, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label20, 0, 3)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(366, 22)
+        Me.TableLayoutPanel3.Controls.Add(Me.txtXCoord, 1, 5)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label16, 0, 5)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(366, 33)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 6
+        Me.TableLayoutPanel3.RowCount = 7
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(323, 272)
@@ -708,7 +711,7 @@ Partial Class frmMain
         'txtCountyName
         '
         Me.txtCountyName.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtCountyName.Location = New System.Drawing.Point(92, 193)
+        Me.txtCountyName.Location = New System.Drawing.Point(92, 186)
         Me.txtCountyName.Name = "txtCountyName"
         Me.txtCountyName.npc_DefaultValue = Nothing
         Me.txtCountyName.npc_FieldName = "County_Name"
@@ -719,7 +722,7 @@ Partial Class frmMain
         'txtCountyNumber
         '
         Me.txtCountyNumber.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtCountyNumber.Location = New System.Drawing.Point(92, 135)
+        Me.txtCountyNumber.Location = New System.Drawing.Point(92, 130)
         Me.txtCountyNumber.Name = "txtCountyNumber"
         Me.txtCountyNumber.npc_DefaultValue = Nothing
         Me.txtCountyNumber.npc_FieldName = "County_Number"
@@ -730,7 +733,7 @@ Partial Class frmMain
         'txtRange
         '
         Me.txtRange.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtRange.Location = New System.Drawing.Point(92, 77)
+        Me.txtRange.Location = New System.Drawing.Point(92, 74)
         Me.txtRange.MaxLength = 2
         Me.txtRange.Name = "txtRange"
         Me.txtRange.npc_DefaultValue = Nothing
@@ -742,7 +745,7 @@ Partial Class frmMain
         'txtTownship
         '
         Me.txtTownship.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtTownship.Location = New System.Drawing.Point(92, 19)
+        Me.txtTownship.Location = New System.Drawing.Point(92, 18)
         Me.txtTownship.MaxLength = 3
         Me.txtTownship.Name = "txtTownship"
         Me.txtTownship.npc_DefaultValue = Nothing
@@ -760,7 +763,7 @@ Partial Class frmMain
         Me.TableLayoutPanel4.Controls.Add(Me.btnClose, 0, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.btnBackupDatabase, 0, 2)
         Me.TableLayoutPanel4.Controls.Add(Me.lblTotalRecords, 0, 3)
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(415, 341)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(383, 342)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 4
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -768,7 +771,7 @@ Partial Class frmMain
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(226, 270)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(289, 269)
         Me.TableLayoutPanel4.TabIndex = 36
         '
         'TableLayoutPanel5
@@ -783,9 +786,10 @@ Partial Class frmMain
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 2
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.RowCount = 3
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.21173!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.78827!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(704, 635)
         Me.TableLayoutPanel5.TabIndex = 39
         '

@@ -1,4 +1,6 @@
-﻿Imports ESRI.ArcGIS.Geodatabase
+﻿Imports System.Windows.Forms
+Imports System.IO
+Imports ESRI.ArcGIS.Geodatabase
 Imports ESRI.ArcGIS.Geometry
 
 Public Class frmMain
@@ -7,6 +9,8 @@ Public Class frmMain
 
 
     End Sub
+
+
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
 
@@ -55,6 +59,7 @@ Public Class frmMain
 
         txtMNDNRNumber.Text = cboMNDNRNumber.Text
 
+
     End Sub
 
     Private Sub cboMNDNRNumber_Leave(sender As Object, e As EventArgs) Handles cboMNDNRNumber.Leave
@@ -95,7 +100,7 @@ Public Class frmMain
         Dim pQueryFilter As IQueryFilter
         pQueryFilter = New QueryFilter
         '**********************************
-      
+
         'check to see if textRange is numeric
         'check to see if txtTwp is numeric
         'if not numeric then exit out
@@ -215,14 +220,6 @@ Public Class frmMain
         My.ArcMap.Document.ActiveView.Extent = pEnvelope
         My.ArcMap.Document.ActiveView.Refresh()
 
-        'if TWP/RNG textboxes are red from previous error, clear them
-        'If txtRange.BackColor = Drawing.Color.Crimson Then
-        '    txtRange.BackColor = Drawing.Color.Transparent
-        'End If
-        'If txtTownship.BackColor = Drawing.Color.Crimson Then
-        '    txtTownship.BackColor = Drawing.Color.Transparent
-        'End If
-
 
     End Sub
 
@@ -271,6 +268,150 @@ Public Class frmMain
 
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         'appCursor.SetCursor(2)
-        Form_Submit()
+        If cboMNDNRNumber.Text = " " Then
+            cboMNDNRNumber.Set_Value(0)
+            txtFirstName.Clear()
+            txtLastName.Clear()
+            txtAddress.Clear()
+            txtCity.Clear()
+            txtZip.Clear()
+            Form_Submit()
+        Else
+            Form_Submit()
+        End If
+        txtTagNumber.Clear()
+        cboSpecies.ResetText()
+        cboSex.ResetText()
+
     End Sub
+
+    'Private Sub btnGenRandomTWPRNG_Click(sender As Object, e As EventArgs) Handles btnGenRandomTWPRNG.Click
+    '    '1.	Get State Feature Class
+    '    '2.	Get Envelope of Polygon
+    '    '3.	While Loop
+    '    '4.	Generate random number between min/max X
+    '    '5.	Generate random number between min/max Y
+    '    '6.	Create point of XYs and perform spatial overlay test on State Boundary polygon
+    '    '7.	If point is inside polygon then exit While Loop
+    '    '8.	Spatial Query County Layer if necessary
+    '    '9.	Get County Feature Class
+    '    '10.	Perform Spatial Query with X/Y you generated
+    '    '11.	Get County name and place in textbox on your form.
+    '    '12.	Place X/Y coordinates in Textboxes on your form.  When you submit your form you can use the X/Y coordinates to create a shape for your Feature.
+    '    '13.	Zoom the map to the X/Y coordinates?
+
+    '    'check to make sure that T, S, R textboxes have valid values
+    '    'if any don't, exit out of routine
+    '    'message box or turn text box red
+
+    '    'Get State Feature Class
+    '    Dim pFeatureClass As IFeatureClass
+    '    pFeatureClass = FeatureClass_GetFromPath(m_StatePath, m_StateName)
+    '    If pFeatureClass Is Nothing Then
+    '        Exit Sub
+    '    End If
+
+    '    Dim pQueryFilter As IQueryFilter
+    '    pQueryFilter = New QueryFilter
+
+    '    pQueryFilter.WhereClause = "STATE_DS_ = 2"
+
+    '    'performs search on table using pQueryFilter
+    '    Dim pFeatureCursor As IFeatureCursor
+    '    pFeatureCursor = pFeatureClass.Search(pQueryFilter, True)
+
+    '    'gets first record that matches the search
+    '    Dim pFeature As IFeature
+    '    pFeature = pFeatureCursor.NextFeature()
+
+    '    'if pFeature is not valid then exit
+    '    If pFeature Is Nothing Then
+    '        Exit Sub
+    '    End If
+
+
+    '    Dim CountyNumber As Short
+    '    'get county number from feature
+    '    CountyNumber = pFeature.Value(pFeature.Fields.FindField("COUN"))
+
+    '    Dim pGeometry As IGeometry
+    '    pGeometry = pFeature.ShapeCopy()
+
+    '    'get the pFeature envelope (x,y)
+    '    Dim pEnvelope As IEnvelope
+    '    pEnvelope = pGeometry.Envelope()
+
+    '    'dim x,y variables
+    '    Dim xmin, xmax, ymin, ymax As Double
+    '    xmin = pEnvelope.XMin
+    '    xmax = pEnvelope.XMax
+    '    ymin = pEnvelope.YMin
+    '    ymax = pEnvelope.YMax
+
+    '    Dim pPoint As IPoint = New Point
+    '    Dim pRelationalOperator2 As IRelationalOperator2
+    '    pRelationalOperator2 = pGeometry
+    '    Dim random As New Random()
+    '    Dim y As Integer
+    '    Dim x As Integer
+
+
+    '    While xmin <> 0
+    '        'generate random x
+    '        x = random.Next(CInt(xmin), CInt(xmax)) ' random.Next(min, max) the range is min to max -1
+    '        y = random.Next(CInt(ymin), CInt(ymax))
+    '        pPoint.X = x
+    '        pPoint.Y = y
+    '        If pRelationalOperator2.Contains(pPoint) = True Then
+    '            Exit While
+    '        End If
+
+    '    End While
+
+    '    m_xCoord = pPoint.X
+    '    m_yCoord = pPoint.Y
+
+    '    'attribute query on county layer (see TSR code)
+    '    'Get County Feature Class
+    '    Dim pFeatureClass2 As IFeatureClass
+    '    pFeatureClass2 = FeatureClass_GetFromPath(m_CountyPath, m_CountyName)
+    '    If pFeatureClass2 Is Nothing Then
+    '        Exit Sub
+    '    End If
+
+    '    'Perform Attribute Query on Township FC for COUNTY NUMBER
+    '    Dim pQueryFilter2 As IQueryFilter2
+    '    pQueryFilter2 = New QueryFilter
+    '    pQueryFilter2.WhereClause = "COUN = " & CountyNumber
+    '    'place county number in textbox on form
+    '    txtCountyNumber.Text = CountyNumber.ToString
+
+    '    pFeatureCursor = pFeatureClass2.Search(pQueryFilter2, True)
+
+    '    'gets first record that matches the search
+    '    pFeature = pFeatureCursor.NextFeature()
+
+    '    'if pFeature is not valid then exit
+    '    If pFeature Is Nothing Then
+    '        Exit Sub
+    '    End If
+
+
+    '    Dim CountyName As String
+    '    'get county number from feature
+    '    CountyName = pFeature.Value(pFeature.Fields.FindField("CTY_NAME"))
+    '    txtCountyName.Text = CountyName
+
+    '    'Place X/Y coordinates in Textboxes on your form.  When you submit your form you can use the X/Y coordinates to create a shape for your Feature.
+    '    txtXCoord.Text = x.ToString
+    '    txtYCoord.Text = y.ToString
+
+    '    'zoom to the township
+    '    My.ArcMap.Document.ActiveView.Extent = pEnvelope
+    '    My.ArcMap.Document.ActiveView.Refresh()
+
+
+
+
+    'End Sub
 End Class

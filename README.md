@@ -7,5 +7,4 @@ Note - this addin will not run without the related MXD and FGDBs referenced in i
 
 Updates
 ===============
-1/9/15 - Bug fixes, round 2. Working copy ready for testing.
 11/5/14 - Working add-in uploaded. Tested internally, more updates to come.

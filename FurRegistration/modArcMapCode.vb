@@ -25,10 +25,14 @@ Module modArcMapCode
     Public m_FeatureClassName As String = "Fur_Reg"
     Public m_FeatureClassPath As String = "I:\MRG\MIS\gis\Fur_Registration_Database\Fur_Registration.gdb"
     'The name of the various PLS layers
-    Public m_PLSPath = "V:\gdrs\data\pub\us_mn_state_dnr\plan_mndnr_public_land_survey\fgdb\plan_mndnr_public_land_survey.gdb"
+    Public m_PLSPath = "v:\gdrs\data\pub\us_mn_state_dnr\plan_mndnr_public_land_survey\fgdb\plan_mndnr_public_land_survey.gdb"
     Public m_PLSName = "pls_twpspy3"
-    Public m_CountyPath = "V:\gdrs\data\pub\us_mn_state_dnr\bdry_counties_in_minnesota\fgdb\bdry_counties_in_minnesota.gdb"
+    Public m_CountyPath = "D:\gdrs\data\pub\us_mn_state_dnr\bdry_counties_in_minnesota\fgdb\bdry_counties_in_minnesota.gdb"
     Public m_CountyName = "mn_county_boundaries"
+    Public m_StatePath = "v:\gdrs\data\pub\us_mn_state_dnr\bdry_state_of_minnesota\fgdb\bdry_state_of_minnesota.gdb"
+    Public m_StateName = "state_of_minnesota"
+
+
     Public m_xCoord As Double = 0
     Public m_yCoord As Double = 0
 
@@ -224,10 +228,12 @@ Module modArcMapCode
             pRow = pCursor.NextRow()
 
             'GET LARGEST CUST_ID
-            Dim pRecord As Integer
+            Dim pRecord As Long
             pRecord = pRow.Value(pRow.Fields.FindField("CUSTOMER_I"))
             pRecord += 1
             m_frmFurBearer.cboMNDNRNumber.Text = pRecord
+
+
 
         Catch ex As Exception
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
@@ -405,7 +411,7 @@ Module modArcMapCode
             'Load the Form
             Form_Load()
 
-            m_frmFurBearer.Show() '************put code here to keep form on top
+            m_frmFurBearer.ShowDialog() '************put code here to keep form on top
 
         Catch ex As Exception
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
@@ -456,6 +462,8 @@ Module modArcMapCode
         Catch ex As Exception
             Error_Catch(ex, System.Reflection.MethodBase.GetCurrentMethod().Name)
         End Try
+
+
     End Sub
 
     Public Sub Form_LoadControl(ByRef ctl As Control, ByVal pTable As ITable)
@@ -522,10 +530,11 @@ Module modArcMapCode
         Dim pTable As ITable
         Dim pCursor As ICursor = Nothing
         Dim pRow As IRow = Nothing
-        Dim pQueryFilter As New QueryFilter()
+        Dim pQueryFilter As IQueryFilter = Nothing
 
         Try
             '**************  CREATE SHAPE.  If it is invalid then error to user!!! ****************
+            pQueryFilter = New QueryFilter
 
             m_frmFurBearer.GenerateTownshipCentroid()
 
@@ -551,24 +560,39 @@ Module modArcMapCode
                 Form_SetFieldValueArray(ctl, pFeatureClass)
             Next
 
-            'Check to see if you are in an operation.
+            ''Check to see if you are in an operation.
             Dim pDataset As IDataset = pFeatureClass
-            workspaceEdit = pDataset.Workspace
 
-            If workspaceEdit Is Nothing Then
-                MessageBox.Show("workspace edit is nothing")
-            End If
+            Dim pID As New UID
 
-            If workspaceEdit.IsBeingEdited = False Then
-                workspaceEdit.StartEditing(False)
-            End If
+            pID.Value = "esriEditor.Editor"
+            m_Editor = TryCast(My.ArcMap.Application.FindExtensionByCLSID(pID), IEditor)
+
+            m_Editor.StartEditing(pDataset.Workspace)
+
+            'workspaceEdit = pDataset.Workspace
+
+            'If workspaceEdit Is Nothing Then
+            '    MessageBox.Show("workspace edit is nothing")
+            'End If
+
+            'If workspaceEdit.IsBeingEdited = False Then
+            '    workspaceEdit.StartEditing(False)
+            'End If
 
             pFeature = pFeatureClass.CreateFeature()
             pFeature.Shape = pGeometry
 
+            Dim int As Integer = 0
+
             For Each va In m_FieldValueArray
+                int = int + 1
                 If va(1) Is Nothing Then Continue For
                 Try
+                    If int = 1 Then
+                        Continue For
+                    End If
+                    Debug.Print(va(0) & ":" & va(1))
                     pFeature.Value(va(0)) = va(1)
 
                 Catch ex As Exception
@@ -579,15 +603,16 @@ Module modArcMapCode
 
             pFeature.Store()
 
-            '**********************************************************************
             'if new record is entered (new trapper, juvenille) create new record & save in table and FC
             'GET TABLE
             pTable = Table_GetFromPath(m_FeatureClassPath, "custtrapping")
             If pTable Is Nothing Then Exit Sub
 
+            'IF MNDNR NUMBER/CUSTOMER ID IS BLANK, SET VALUE AND ALLOW BANK ENTRY, OTHERWISE QUERY CUSTOMER TABLE FOR MATCHING RECORD
             'QUERY TABLE
-            pQueryFilter = New QueryFilter
+            pQueryFilter = New QueryFilter()
             pQueryFilter.WhereClause = """CUSTOMER_I"" = " & m_frmFurBearer.cboMNDNRNumber.Text
+
 
             pCursor = pTable.Search(pQueryFilter, False)
             pRow = pCursor.NextRow()
@@ -617,8 +642,11 @@ Module modArcMapCode
 
             pRow.Store()
 
+            'IF MNDNR NUMBER IS BLANK, ALLOW A NEW 
+
             '************************************************************************
-            workspaceEdit.StopEditing(True)
+            m_Editor.StopEditing(True)
+            'workspaceEdit.StopEditing(True)
             My.ArcMap.Document.ActiveView.Refresh()
             'm_Editor.StopOperation("Submitted Edits to Features in " & pFeatureClass.AliasName)
             'MessageBox.Show("7")
@@ -633,6 +661,15 @@ Module modArcMapCode
             pFeature = Nothing
             workspaceEdit = Nothing
             pFeatureClass = Nothing
+            pGeometry = Nothing
+            aPath = Nothing
+            aName = Nothing
+            aStatus = Nothing
+            pTable = Nothing
+            pCursor = Nothing
+            pRow = Nothing
+            pQueryFilter = Nothing
+
         End Try
         'MessageBox.Show("9")
 
@@ -664,7 +701,12 @@ Module modArcMapCode
 
             'If Not ctl.Enabled Then Exit Sub
 
+            If ctl.Name = "btnSearch" Then
+                Debug.Print(ctl.Name)
+            End If
+
             If TypeOf ctl Is clsTextbox Then
+
                 fIDX = pFeatureClass.Fields.FindField(CType(ctl, clsTextbox).npc_FieldName)
                 If fIDX = -1 Then Exit Sub
                 'If pFeatureClass.Fields.Field(fIDX).Type = esriFieldType.esriFieldTypeString Then
@@ -685,6 +727,10 @@ Module modArcMapCode
                 If fIDX = -1 Then Exit Sub
                 'check to see if the field name = customer ID then
                 If (CType(ctl, clsCombobox).npc_FieldName = "CUSTOMER_I") Then
+                    If ctl.Text = "" Then
+                        ctl.Text = "0"
+                    End If
+
                     m_FieldValueArray.Add(New Object() {fIDX, CType(ctl.Text, Long)})
                 Else
                     'm_FieldValueArray.Add(New Object() {fIDX, CType(ctl, clsCombobox).Get_Value()})
@@ -700,6 +746,7 @@ Module modArcMapCode
 
     End Sub
 #End Region
+
 #Region "ERROR HANDLING"
     Public Sub Error_Catch(ByVal ex As Exception, ByVal mName As String, Optional ByVal isQuiet As Boolean = False)
         Try
@@ -711,6 +758,7 @@ Module modArcMapCode
         End Try
     End Sub
 #End Region
+
 #Region "FILE CODE"
     Public Function Directory_Create(ByVal path As String) As Boolean
         'Check to make sure the user path exists.  If not, create it.
@@ -793,6 +841,7 @@ Module modArcMapCode
         End Try
     End Sub
 #End Region
+
 #Region "MISC CODE"
     Public Sub Object_Release(ByVal obj As Object)
         Dim refsLeft As Integer = 0
